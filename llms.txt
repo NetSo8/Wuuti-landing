@@ -1,0 +1,29 @@
+# Wuuti
+
+> Wuuti est une application photo pour les soirées, à l'aveugle. Pendant l'événement, chaque participant reçoit des pings à des moments différents et a deux minutes pour prendre une photo brute, sans filtre ni aperçu. Personne ne voit les photos avant le lendemain : à l'heure choisie par l'hôte, le coffre s'ouvre et tout le monde découvre l'album en même temps.
+
+Statut : pas encore sortie, bientôt sur iPhone et Android.
+
+## Fonctionnement
+
+- Créer une room : nom, couleur, heure d'ouverture du coffre, publique ou privée, sur une soirée ou un week-end.
+- Rejoindre : code à six caractères, lien ou QR. Une fois la room lancée, plus personne n'entre.
+- Pings : densité calme, recommandée ou intense ; chacun sonne à son moment.
+- Lives publics : des inconnus peuvent regarder une room publique ; ses invités, jamais.
+- Album : trié par heure ou par regard (photos de chaque invité), likes et commentaires le lendemain.
+
+## Règles
+
+- Pas de chat, pas de filtre, pas de rattrapage : un ping manqué est perdu.
+- Une seule room à la fois.
+- Un compte est nécessaire (email, Google, Apple ou passkey).
+
+## Tarifs
+
+- Gratuite : jusqu'à 30 participants, une pub à l'ouverture du coffre, photos brutes 30 jours, album pour toujours.
+- Premium : 4,99 € pour une room, participants illimités, sans pub, achat unique sans abonnement.
+
+## Liens
+
+- [Site](https://wuuti.fr/)
+- Contact : hello@wuuti.fr

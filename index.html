@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Wuuti, l'app photo de soirée à l'aveugle</title>
+  <meta name="description" content="Wuuti, l'app photo pour tes soirées : des pings au hasard, deux minutes pour une photo brute, aucun aperçu. Le lendemain, tout le monde découvre l'album." />
+  <link rel="canonical" href="https://wuuti.fr/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0C1517" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Wuuti" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="https://wuuti.fr/" />
+  <meta property="og:title" content="Wuuti, l'app photo de soirée à l'aveugle" />
+  <meta property="og:description" content="Shoote la soirée. Découvre-la demain. Des photos brutes, sans aperçu, révélées à tout le monde le lendemain." />
+  <meta property="og:image" content="https://wuuti.fr/assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Wuuti : Shoote la soirée. Découvre-la demain. L'app photo de soirée, à l'aveugle." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wuuti, l'app photo de soirée à l'aveugle" />
+  <meta name="twitter:description" content="Shoote la soirée. Découvre-la demain." />
+  <meta name="twitter:image" content="https://wuuti.fr/assets/og.jpg" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://wuuti.fr/#site",
+      "url": "https://wuuti.fr/",
+      "name": "Wuuti",
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://wuuti.fr/#org",
+      "name": "Wuuti",
+      "url": "https://wuuti.fr/",
+      "logo": "https://wuuti.fr/assets/icon.png"
+    },
+    {
+      "@type": "MobileApplication",
+      "name": "Wuuti",
+      "operatingSystem": "iOS, Android",
+      "applicationCategory": "MultimediaApplication",
+      "description": "Wuuti, l'app photo pour tes soirées : des pings au hasard, deux minutes pour une photo brute, aucun aperçu. Le lendemain, tout le monde découvre l'album.",
+      "inLanguage": "fr-FR",
+      "image": "https://wuuti.fr/assets/og.jpg",
+      "publisher": {
+        "@id": "https://wuuti.fr/#org"
+      },
+      "screenshot": [
+        "https://wuuti.fr/assets/screens/23-ping-camera.webp",
+        "https://wuuti.fr/assets/screens/21-live.webp",
+        "https://wuuti.fr/assets/screens/29-coffre-ouvert.webp"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Gratuite",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium, pour une room",
+          "price": "4.99",
+          "priceCurrency": "EUR"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Je peux voir les photos pendant la soirée ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Personne, pas même l'hôte. Les photos restent scellées dans le coffre jusqu'à l'heure d'ouverture, le lendemain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Et si je rate un ping ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il est perdu. Pas de rattrapage, pas de photo importée de ta galerie. C'est ce qui rend l'album honnête."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qui peut regarder une room en direct ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seulement les rooms publiques, et jamais par leurs propres invités. Une room privée n'a pas de spectateurs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Il faut créer un compte ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, un compte est nécessaire (email et mot de passe, Google, Apple ou passkey). Ton nom d'utilisateur signe tes photos, pas de profil à remplir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Je peux être dans deux rooms à la fois ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non, une seule à la fois. Tu es à une soirée, pas à trois."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preload" href="assets/fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/screens/23-ping-camera.webp" as="image" />
+  <link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+  <!-- Icônes Phosphor (MIT), en sprite : pas de CSS ni de police externe -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-apple-logo" viewBox="0 0 256 256"><path d="M128.23,30A40,40,0,0,1,167,0h1a8,8,0,0,1,0,16h-1a24,24,0,0,0-23.24,18,8,8,0,1,1-15.5-4ZM223.3,169.59a8.07,8.07,0,0,0-2.8-3.4C203.53,154.53,200,134.64,200,120c0-17.67,13.47-33.06,21.5-40.67a8,8,0,0,0,0-11.62C208.82,55.74,187.82,48,168,48a72.23,72.23,0,0,0-40,12.13,71.56,71.56,0,0,0-90.71,9.09A74.63,74.63,0,0,0,16,123.4a127,127,0,0,0,40.14,89.73A39.8,39.8,0,0,0,83.59,224h87.68a39.84,39.84,0,0,0,29.12-12.57,125,125,0,0,0,17.82-24.6C225.23,174,224.33,172,223.3,169.59Z"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 256 256"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
+    <symbol id="i-bell-ringing" viewBox="0 0 256 256"><path d="M224,71.1a8,8,0,0,1-10.78-3.42,94.13,94.13,0,0,0-33.46-36.91,8,8,0,1,1,8.54-13.54,111.46,111.46,0,0,1,39.12,43.09A8,8,0,0,1,224,71.1ZM35.71,72a8,8,0,0,0,7.1-4.32A94.13,94.13,0,0,1,76.27,30.77a8,8,0,1,0-8.54-13.54A111.46,111.46,0,0,0,28.61,60.32,8,8,0,0,0,35.71,72Zm186.1,103.94A16,16,0,0,1,208,200H167.2a40,40,0,0,1-78.4,0H48a16,16,0,0,1-13.79-24.06C43.22,160.39,48,138.28,48,112a80,80,0,0,1,160,0C208,138.27,212.78,160.38,221.81,175.94ZM150.62,200H105.38a24,24,0,0,0,45.24,0Z"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol>
+    <symbol id="i-google-play-logo" viewBox="0 0 256 256"><path d="M239.82,114.18,72,18.16a16,16,0,0,0-16.12,0A15.68,15.68,0,0,0,48,31.87V224.13a15.68,15.68,0,0,0,7.92,13.67,16,16,0,0,0,16.12,0l167.78-96a15.76,15.76,0,0,0,0-27.64ZM160,139.31l18.92,18.92-88.5,50.66ZM90.4,47.1l88.53,50.67L160,116.69ZM193.31,150l-22-22,22-22,38.43,22Z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z"/></symbol>
+    <symbol id="i-lock-simple" viewBox="0 0 256 256"><path d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96Z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol>
+    <symbol id="i-sun-horizon" viewBox="0 0 256 256"><path d="M248,160a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H56.45a73.54,73.54,0,0,1-.45-8,72,72,0,0,1,144,0,73.54,73.54,0,0,1-.45,8H240A8,8,0,0,1,248,160Zm-40,32H48a8,8,0,0,0,0,16H208a8,8,0,0,0,0-16ZM80.84,59.58a8,8,0,0,0,14.32-7.16l-8-16a8,8,0,0,0-14.32,7.16ZM20.42,103.16l16,8a8,8,0,1,0,7.16-14.31l-16-8a8,8,0,1,0-7.16,14.31ZM216,112a8,8,0,0,0,3.57-.84l16-8a8,8,0,1,0-7.16-14.31l-16,8A8,8,0,0,0,216,112ZM164.42,63.16a8,8,0,0,0,10.74-3.58l8-16a8,8,0,0,0-14.32-7.16l-8,16A8,8,0,0,0,164.42,63.16Z"/></symbol>
+  </svg>
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <!-- NAV -->
+  <header class="nav" data-nav>
+    <div class="container nav__inner">
+      <a href="#top" class="wordmark">
+        w<span class="eyes" data-eyes data-eyes-logo><span class="sr">uu</span></span>ti
+      </a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="#rituel">Le rituel</a>
+        <a href="#coffre">Le coffre</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#questions">Questions</a>
+      </nav>
+      <a href="#obtenir" class="btn btn--ember btn--sm" data-magnetic>
+        <span>Bientôt disponible</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__sentinel" data-hero-sentinel></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="soon reveal-load">
+            <span class="soon__dot" aria-hidden="true"></span>
+            Bientôt sur iPhone et Android
+          </p>
+          <h1 class="hero__title">
+            <span class="line"><span>Shoote la soirée.</span></span>
+            <span class="line"><span>Découvre-la <em>demain.</em></span></span>
+          </h1>
+          <p class="hero__sub reveal-load" style="--d: 120ms">
+            À chaque ping, deux minutes pour une photo brute. Personne ne voit rien avant le lendemain, quand le coffre s'ouvre.
+          </p>
+          <div class="hero__ctas reveal-load" style="--d: 200ms">
+            <a href="#rituel" class="btn btn--ember btn--lg" data-magnetic>
+              <span>Voir le rituel</span>
+              <svg class="icon btn__arrow btn__arrow--down" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal-load" style="--d: 80ms" data-tilt>
+          <div class="ping-rings" data-rings aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="phone phone--back" aria-hidden="true">
+            <img src="assets/screens/21-live.webp" alt="" width="600" height="1305" loading="eager" />
+          </div>
+          <div class="phone phone--front">
+            <img src="assets/screens/23-ping-camera.webp" alt="Écran Wuuti : un ping sonne, il reste 1 minute 45 pour prendre la photo." width="600" height="1305" fetchpriority="high" />
+            <div class="notif" data-notif aria-hidden="true">
+              <span class="notif__icon"><span class="eyes eyes--xs" data-eyes="static" aria-hidden="true"></span></span>
+              <span class="notif__body">
+                <span class="notif__meta"><b>WUUTI</b> Anniversaire de Camille <span class="notif__now">maintenant</span></span>
+                <span class="notif__text">C'est le moment. Tu as <span class="tabular" data-notif-count>2:00</span>.</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE : les règles -->
+    <div class="marquee">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>Pas de chat</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span>Pas de filtre</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span>Pas de rattrapage</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span>Pas d'aperçu</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span>Pas de chat</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span>Pas de filtre</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span>Pas de rattrapage</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span>Pas d'aperçu</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LE RITUEL : sticky scroll -->
+    <section class="ritual" id="rituel">
+      <div class="container">
+        <h2 class="section-title reveal">Trois temps.<br />Une seule règle : ne rien voir.</h2>
+        <div class="ritual__grid">
+          <div class="ritual__stage" aria-hidden="true">
+            <div class="phone phone--stage">
+              <img class="is-active" data-ritual-img="0" src="assets/screens/22-ping-notif.webp" alt="" width="600" height="1305" loading="lazy" />
+              <img data-ritual-img="1" src="assets/screens/21-live.webp" alt="" width="600" height="1305" loading="lazy" />
+              <img data-ritual-img="2" src="assets/screens/29-coffre-ouvert.webp" alt="" width="600" height="1305" loading="lazy" />
+            </div>
+          </div>
+          <ol class="ritual__steps">
+            <li class="ritual__step is-active" data-ritual-step="0">
+              <span class="ritual__icon"><svg class="icon" aria-hidden="true"><use href="#i-bell-ringing"/></svg></span>
+              <h3>Ça sonne.</h3>
+              <p>Chacun reçoit ses pings à un moment différent. Deux minutes pour dégainer, caméra avant ou arrière, sans filtre.</p>
+              <img class="ritual__inline" src="assets/screens/22-ping-notif.webp" alt="Notification Wuuti : c'est le moment, tu as 2 minutes." width="600" height="1305" loading="lazy" />
+            </li>
+            <li class="ritual__step" data-ritual-step="1">
+              <span class="ritual__icon"><svg class="icon" aria-hidden="true"><use href="#i-lock-simple"/></svg></span>
+              <h3>Tu shootes. Tu ne vois rien.</h3>
+              <p>Ta photo file au coffre, scellée. Celles des autres aussi. Tu vis la soirée au lieu de la regarder sur ton écran.</p>
+              <img class="ritual__inline" src="assets/screens/21-live.webp" alt="Écran Wuuti pendant la soirée : tu es aveugle, c'est voulu." width="600" height="1305" loading="lazy" />
+            </li>
+            <li class="ritual__step" data-ritual-step="2">
+              <span class="ritual__icon"><svg class="icon" aria-hidden="true"><use href="#i-sun-horizon"/></svg></span>
+              <h3>Le lendemain, tout s'ouvre.</h3>
+              <p>À l'heure choisie par l'hôte, le coffre s'ouvre pour tout le monde. Même surprise, même seconde.</p>
+              <img class="ritual__inline" src="assets/screens/29-coffre-ouvert.webp" alt="Écran Wuuti : le coffre est ouvert, 23 photos." width="600" height="1305" loading="lazy" />
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTE -->
+    <section class="manifesto" id="aveugle">
+      <div class="container manifesto__inner">
+        <span class="eyes eyes--manifesto" data-eyes="static" aria-hidden="true"></span>
+        <h2 class="manifesto__title reveal">Tu es aveugle.<br /><em>C'est voulu.</em></h2>
+        <p class="manifesto__text" data-words>Sans aperçu, personne ne pose pour la photo. Tu ne vérifies pas si tu es bien dessus, tu ne fais pas défiler les clichés des autres. Tu vis la soirée, et le lendemain, l'album lui ressemble enfin.</p>
+      </div>
+    </section>
+
+    <!-- LE COFFRE : bascule nuit / jour -->
+    <section class="vault" id="coffre" data-vault>
+      <div class="vault__stage">
+        <div class="vault__photos" aria-hidden="true" data-vault-photos></div>
+
+        <div class="vault__center">
+          <div class="vault__dial" aria-hidden="true">
+            <svg viewBox="0 0 200 200" class="vault__ticks"></svg>
+            <span class="eyes eyes--vault" data-eyes data-eyes-vault></span>
+          </div>
+          <div class="vault__sealed">
+            <p class="vault__time tabular" data-vault-countdown>--:--:--</p>
+            <p class="vault__caption">Tout le monde découvre l'album demain à 11h00.</p>
+          </div>
+          <div class="vault__open">
+            <h2 class="vault__title">Le coffre est ouvert.</h2>
+            <p class="vault__caption">Tout le monde découvre l'album en même temps. Personne n'a triché, même pas l'hôte.</p>
+          </div>
+        </div>
+      </div>
+      <div class="vault__trigger" data-vault-trigger aria-hidden="true"></div>
+    </section>
+
+    <!-- BENTO (jour) -->
+    <section class="features day" id="fonctions" data-day>
+      <div class="container">
+        <h2 class="section-title reveal">Tout pour la soirée.<br />Rien pour la distraire.</h2>
+
+        <div class="bento">
+          <!-- 1. Créer -->
+          <article class="cell cell--create reveal">
+            <div class="cell__text">
+              <h3>Une room en 30 secondes.</h3>
+              <p>Un nom, une couleur, une heure de coffre. Publique ou privée, sur une soirée ou tout un week-end.</p>
+              <div class="swatches" role="radiogroup" aria-label="Couleur de la room" data-swatches>
+                <button role="radio" aria-checked="true" aria-label="Braise" style="--c:#D93D14"></button>
+                <button role="radio" aria-checked="false" aria-label="Lagune" style="--c:#3FB8A6"></button>
+                <button role="radio" aria-checked="false" aria-label="Soleil" style="--c:#E8B83C"></button>
+                <button role="radio" aria-checked="false" aria-label="Lilas" style="--c:#9C8CF0"></button>
+                <button role="radio" aria-checked="false" aria-label="Pivoine" style="--c:#EA6FA0"></button>
+                <button role="radio" aria-checked="false" aria-label="Mousse" style="--c:#7FB45A"></button>
+              </div>
+            </div>
+            <div class="cover" data-cover aria-hidden="true">
+              <div class="cover__rings"><span></span><span></span><span></span><span></span></div>
+              <span class="cover__chip"><svg class="icon" aria-hidden="true"><use href="#i-lock-simple"/></svg> Privée</span>
+              <span class="cover__name">Anniversaire</span>
+              <span class="cover__meta">Commence aujourd'hui à 21h30</span>
+            </div>
+          </article>
+
+          <!-- 2. Rejoindre -->
+          <article class="cell cell--join reveal">
+            <h3>Rejoins avec un code.</h3>
+            <p>Six caractères, un lien ou un QR. Une fois la room lancée, plus personne n'entre.</p>
+            <div class="code" data-code aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <span class="code__ok" data-code-ok><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg> Anniversaire, 9 participants</span>
+          </article>
+
+          <!-- 3. Pings -->
+          <article class="cell cell--pings reveal">
+            <div class="cell__head">
+              <h3>Chacun sonne à son moment.</h3>
+              <div class="seg" role="radiogroup" aria-label="Densité des pings" data-seg>
+                <button role="radio" aria-checked="false" data-rate="3">Calme</button>
+                <button role="radio" aria-checked="true" data-rate="5">Recommandé</button>
+                <button role="radio" aria-checked="false" data-rate="8">Intense</button>
+                <span class="seg__thumb" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="timeline" data-timeline>
+              <!-- rempli par main.js -->
+            </div>
+            <div class="timeline__axis" aria-hidden="true"><span>21h</span><span>23h</span><span>1h</span><span>3h</span></div>
+          </article>
+
+          <!-- 4. Lives publics -->
+          <article class="cell cell--live reveal">
+            <div class="cell__text">
+              <span class="live-tag"><span class="live-tag__dot"></span>Live</span>
+              <h3>Spectate les soirées publiques.</h3>
+              <p>Les inconnus regardent en direct. Les invités, eux, restent aveugles jusqu'au coffre.</p>
+            </div>
+            <div class="cell__shot">
+              <img src="assets/screens/32-spectateur.webp" alt="Écran spectateur Wuuti : un live public avec 214 regards." width="600" height="1305" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- 5. Album -->
+          <article class="cell cell--album reveal">
+            <div class="cell__shot cell__shot--pair">
+              <img src="assets/screens/09-album.webp" alt="Album Wuuti trié par chronologie." width="600" height="1305" loading="lazy" />
+              <img src="assets/screens/10-album-par-regard.webp" alt="Album Wuuti trié par regard, photo par photo de chaque invité." width="600" height="1305" loading="lazy" />
+            </div>
+            <div class="cell__text">
+              <h3>L'album, par heure ou par regard.</h3>
+              <p>Revis la nuit dans l'ordre, ou à travers les yeux de chacun. Likes et commentaires, le lendemain seulement.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TARIFS -->
+    <section class="pricing day" id="tarifs" data-day>
+      <div class="container">
+        <h2 class="section-title reveal">Gratuit pour la plupart des soirées.</h2>
+        <p class="section-sub reveal">Tu paies seulement si la fête déborde. Une fois, pour cette room.</p>
+        <div class="plans">
+          <article class="plan reveal">
+            <h3>Gratuite</h3>
+            <p class="plan__price"><span class="tabular">0 €</span></p>
+            <ul>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Jusqu'à 30 participants, toi compris</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Une pub à l'ouverture du coffre</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Photos brutes 30 jours, album pour toujours</li>
+            </ul>
+          </article>
+          <article class="plan plan--premium reveal">
+            <h3>Premium <span class="plan__badge">Pour cette room</span></h3>
+            <p class="plan__price"><span class="tabular">4,99 €</span></p>
+            <ul>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Participants illimités</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Aucune pub, coffre pur</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Achat unique, pas d'abonnement</li>
+            </ul>
+          </article>
+        </div>
+        <p class="pricing__note reveal"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg> Les spectateurs ne comptent jamais dans le plafond.</p>
+      </div>
+    </section>
+
+    <!-- QUESTIONS -->
+    <section class="faq day" id="questions" data-day>
+      <div class="container faq__grid">
+        <h2 class="section-title reveal">Les règles du jeu.</h2>
+        <div class="faq__list">
+          <div class="faq__item reveal">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-b">Je peux voir les photos pendant la soirée ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-1" role="region" aria-labelledby="faq-1-b"><div><p>Non. Personne, pas même l'hôte. Les photos restent scellées dans le coffre jusqu'à l'heure d'ouverture, le lendemain.</p></div></div>
+          </div>
+          <div class="faq__item reveal">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-b">Et si je rate un ping ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-2" role="region" aria-labelledby="faq-2-b"><div><p>Il est perdu. Pas de rattrapage, pas de photo importée de ta galerie. C'est ce qui rend l'album honnête.</p></div></div>
+          </div>
+          <div class="faq__item reveal">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-b">Qui peut regarder une room en direct ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-3" role="region" aria-labelledby="faq-3-b"><div><p>Seulement les rooms publiques, et jamais par leurs propres invités. Une room privée n'a pas de spectateurs.</p></div></div>
+          </div>
+          <div class="faq__item reveal">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-b">Il faut créer un compte ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-4" role="region" aria-labelledby="faq-4-b"><div><p>Oui, un compte est nécessaire (email et mot de passe, Google, Apple ou passkey). Ton nom d'utilisateur signe tes photos, pas de profil à remplir.</p></div></div>
+          </div>
+          <div class="faq__item reveal">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-b">Je peux être dans deux rooms à la fois ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-5" role="region" aria-labelledby="faq-5-b"><div><p>Non, une seule à la fois. Tu es à une soirée, pas à trois.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="final day" id="obtenir" data-day>
+      <div class="container final__inner">
+        <span class="eyes eyes--final" data-eyes data-eyes-final aria-hidden="true"></span>
+        <h2 class="final__title reveal">Ta prochaine soirée<br />mérite un coffre.</h2>
+        <p class="final__sub reveal">Wuuti n'est pas encore sorti. Il arrive très bientôt sur iPhone et Android.</p>
+        <!-- TODO : au lancement, remplacer ces badges par les vrais liens de store -->
+        <ul class="final__stores reveal" aria-label="Disponibilité">
+          <li class="store">
+            <svg class="icon" aria-hidden="true"><use href="#i-apple-logo"/></svg>
+            <span class="store__txt"><small>Bientôt sur</small>App Store</span>
+          </li>
+          <li class="store">
+            <svg class="icon" aria-hidden="true"><use href="#i-google-play-logo"/></svg>
+            <span class="store__txt"><small>Bientôt sur</small>Google Play</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer day" data-day>
+    <div class="container footer__inner">
+      <a href="#top" class="wordmark wordmark--sm">
+        w<span class="eyes" data-eyes data-eyes-open><span class="sr">uu</span></span>ti
+      </a>
+      <nav class="footer__links" aria-label="Liens légaux">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+        <a href="mailto:hello@wuuti.fr">hello@wuuti.fr</a>
+      </nav>
+      <p class="footer__copy">© 2026 Wuuti</p>
+    </div>
+  </footer>
+
+  <script src="main.js?v=9" defer></script>
+</body>
+</html>
