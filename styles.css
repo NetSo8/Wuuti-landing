@@ -645,7 +645,9 @@ body::after {
 /* ---------- Coffre : la bascule ---------- */
 .vault {
   position: relative;
-  height: 230vh;
+  /* +80px : le coffre reste épinglé un peu après l'ouverture, le temps de voir les polaroïds arriver. */
+  --vault-h: 230vh;
+  height: calc(var(--vault-h) + 80px);
   background: var(--ink);
   transition: background-color 1100ms var(--ease-in-out);
 }
@@ -658,7 +660,7 @@ body::after {
   display: grid;
   place-items: center;
 }
-.vault__trigger { position: absolute; top: 58%; bottom: 0; left: 0; width: 1px; pointer-events: none; }
+.vault__trigger { position: absolute; top: calc(var(--vault-h) * 0.58); bottom: 0; left: 0; width: 1px; pointer-events: none; }
 .vault__center {
   position: relative;
   z-index: 2;
@@ -745,7 +747,7 @@ body::after {
 .vault:not(.is-open) .polaroid { transition-duration: 350ms, 250ms; transition-delay: 0ms; }
 
 @media (max-width: 767px) {
-  .vault { height: 200vh; }
+  .vault { --vault-h: 200vh; }
   .vault__dial { width: 150px; }
   .polaroid { width: 76px; padding: 5px 5px 16px; }
   .polaroid figcaption { font-size: 0.66rem; bottom: 1px; }
