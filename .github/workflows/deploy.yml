@@ -1,0 +1,45 @@
+name: Déploiement FTP
+
+# Site statique sans build : on rassemble les fichiers publics dans dist/
+# puis on les téléverse sur l'hébergement OVH.
+on:
+  push:
+    branches:
+      - main
+  # Relancer un déploiement à la main depuis l'onglet Actions.
+  workflow_dispatch:
+
+# Deux déploiements simultanés téléverseraient le même dossier en même temps.
+concurrency:
+  group: deploy-ftp
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v7
+
+      # Même liste que deploy.sh : le site, sans les fichiers de travail
+      # (.claude, .github, deploy.sh, .DS_Store).
+      - name: Préparer les fichiers du site
+        run: |
+          mkdir dist
+          cp index.html mentions-legales.html confidentialite.html styles.css main.js \
+             robots.txt sitemap.xml llms.txt .htaccess dist/
+          cp -R assets dist/
+          find dist -name .DS_Store -delete
+
+      - name: Téléverser sur l'hébergement
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: /www/
+          # Pas de clean-slate : l'action garde un fichier d'état sur le serveur
+          # et n'envoie que ce qui a changé (et supprime ce qui a disparu).
