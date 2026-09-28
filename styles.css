@@ -1132,7 +1132,11 @@ body::after {
 /* ---------- Occasions ---------- */
 .occasions { padding: clamp(64px, 8vw, 110px) 0 0; }
 .occasions__grid { margin-top: 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.occasion { border-radius: var(--r-card); padding: clamp(24px, 2.6vw, 32px); background: var(--paper-hi); }
+.occasion { position: relative; border-radius: var(--r-card); padding: clamp(24px, 2.6vw, 32px); background: var(--paper-hi); }
+.occasion__icon { float: right; width: 56px; height: 56px; margin: -8px -8px 12px 16px; fill: none; stroke: var(--paper-line); stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+.occasion__trace { stroke: var(--ember); stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 0.4s var(--ease-out); }
+@media (hover: hover) { .occasion:hover .occasion__trace { stroke-dashoffset: 0; transition-duration: 0.7s; } }
+@media (prefers-reduced-motion: reduce) { .occasion__trace { transition: none; } }
 .occasion h3 { font-size: 20px; font-weight: 650; letter-spacing: -0.02em; }
 .occasion p { margin-top: 10px; color: var(--ink-muted); text-wrap: pretty; }
 @media (max-width: 1023px) { .occasions__grid { grid-template-columns: 1fr 1fr; } }
