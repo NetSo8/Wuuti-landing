@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Wuuti, l'app photo de soirée à l'aveugle</title>
-  <meta name="description" content="Wuuti, l'app photo pour tes soirées : des pings au hasard, deux minutes pour une photo brute, aucun aperçu. Le lendemain, tout le monde découvre l'album." />
+  <title>Wuuti : l'appareil photo jetable de tes soirées, en appli</title>
+  <meta name="description" content="Wuuti, l'appli appareil photo jetable pour soirées, anniversaires, mariages et EVJF : tes invités prennent les photos à l'aveugle, l'album photo partagé se révèle le lendemain." />
   <link rel="canonical" href="https://wuuti.fr/" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0C1517" />
@@ -13,14 +13,14 @@
   <meta property="og:site_name" content="Wuuti" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:url" content="https://wuuti.fr/" />
-  <meta property="og:title" content="Wuuti, l'app photo de soirée à l'aveugle" />
-  <meta property="og:description" content="Shoote la soirée. Découvre-la demain. Des photos brutes, sans aperçu, révélées à tout le monde le lendemain." />
+  <meta property="og:title" content="Wuuti : l'appareil photo jetable de tes soirées, en appli" />
+  <meta property="og:description" content="Shoote la soirée. Découvre-la demain. Les photos de tous tes invités, sans aperçu, réunies dans un album partagé qui s'ouvre le lendemain." />
   <meta property="og:image" content="https://wuuti.fr/assets/og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Wuuti : Shoote la soirée. Découvre-la demain. L'app photo de soirée, à l'aveugle." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Wuuti, l'app photo de soirée à l'aveugle" />
+  <meta name="twitter:title" content="Wuuti : l'appareil photo jetable de tes soirées, en appli" />
   <meta name="twitter:description" content="Shoote la soirée. Découvre-la demain." />
   <meta name="twitter:image" content="https://wuuti.fr/assets/og.jpg" />
 
@@ -46,8 +46,10 @@
       "@type": "MobileApplication",
       "name": "Wuuti",
       "operatingSystem": "iOS, Android",
-      "applicationCategory": "MultimediaApplication",
-      "description": "Wuuti, l'app photo pour tes soirées : des pings au hasard, deux minutes pour une photo brute, aucun aperçu. Le lendemain, tout le monde découvre l'album.",
+      "applicationCategory": "PhotographyApplication",
+      "description": "Wuuti, l'appli appareil photo jetable pour soirées, anniversaires, mariages et EVJF : tes invités prennent les photos à l'aveugle, l'album photo partagé se révèle le lendemain.",
+      "keywords": "appareil photo jetable, application photo soirée, album photo partagé, photos invités mariage, photo anniversaire, EVJF, alternative BeReal",
+      "featureList": ["Pings photo aléatoires pour chaque invité", "Photos sans aperçu ni filtre", "Album photo partagé révélé le lendemain", "Room privée ou publique, code, lien ou QR", "Album trié par heure ou par invité"],
       "inLanguage": "fr-FR",
       "image": "https://wuuti.fr/assets/og.jpg",
       "publisher": {
@@ -115,6 +117,38 @@
             "@type": "Answer",
             "text": "Non, une seule à la fois. Tu es à une soirée, pas à trois."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment récupérer les photos de tous les invités ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tu n'as rien à récupérer. Chaque photo prise dans la room part directement dans le même album partagé, qui s'ouvre pour tout le monde le lendemain. Plus besoin de relancer le groupe WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wuuti, c'est un appareil photo jetable ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est l'esprit : pas d'aperçu, pas de retouche, et on découvre les photos plus tard. Sauf qu'ici, pas de pellicule à développer ni d'appareil à distribuer : chaque invité utilise son téléphone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle différence avec BeReal ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BeReal, c'est une photo par jour avec tes amis. Wuuti, c'est le temps d'un événement : chacun reçoit ses pings à un moment différent, personne ne voit rien pendant la soirée, et tout se révèle d'un coup le lendemain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ça marche pour un mariage ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Les invités rejoignent avec un QR code sur les tables, et vous découvrez le lendemain le mariage vu par chacun d'eux. Au-delà de 30 invités, la formule Premium à 0,99 € ouvre la room sans limite."
+          }
         }
       ]
     }
@@ -126,7 +160,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="preload" href="assets/fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/screens/23-ping-camera.webp?v=2" as="image" />
-  <link rel="stylesheet" href="styles.css?v=11" />
+  <link rel="stylesheet" href="styles.css?v=12" />
 </head>
 <body>
   <!-- Icônes Phosphor (MIT), en sprite : pas de CSS ni de police externe -->
@@ -152,7 +186,7 @@
       </a>
       <nav class="nav__links" aria-label="Sections">
         <a href="#rituel">Le rituel</a>
-        <a href="#coffre">Le coffre</a>
+        <a href="#occasions">Occasions</a>
         <a href="#tarifs">Tarifs</a>
         <a href="#questions">Questions</a>
       </nav>
@@ -171,14 +205,14 @@
         <div class="hero__copy">
           <p class="soon reveal-load">
             <span class="soon__dot" aria-hidden="true"></span>
-            Bientôt sur iPhone et Android
+            L'appareil photo jetable, en appli · bientôt sur iPhone et Android
           </p>
           <h1 class="hero__title">
             <span class="line"><span>Shoote la soirée.</span></span>
             <span class="line"><span>Découvre-la <em>demain.</em></span></span>
           </h1>
           <p class="hero__sub reveal-load" style="--d: 120ms">
-            À chaque ping, deux minutes pour une photo brute. Personne ne voit rien avant le lendemain, quand le coffre s'ouvre.
+            L'appli photo de soirée où chaque invité shoote à l'aveugle. À chaque ping, deux minutes pour une photo brute. Le lendemain, le coffre s'ouvre sur l'album partagé de toute la soirée.
           </p>
           <div class="hero__ctas reveal-load" style="--d: 200ms">
             <a href="#rituel" class="btn btn--ember btn--lg" data-magnetic>
@@ -196,7 +230,7 @@
             <img src="assets/screens/21-live.webp" alt="" width="600" height="1305" loading="eager" />
           </div>
           <div class="phone phone--front">
-            <img src="assets/screens/23-ping-camera.webp?v=2" alt="Écran Wuuti : un ping sonne, il reste 1 minute 16 pour prendre la photo." width="600" height="1305" fetchpriority="high" />
+            <img src="assets/screens/23-ping-camera.webp?v=2" alt="Appli photo de soirée Wuuti : un ping sonne, il reste 1 minute 16 pour prendre la photo." width="600" height="1305" fetchpriority="high" />
             <div class="notif" data-notif aria-hidden="true">
               <span class="notif__icon"><span class="eyes eyes--xs" data-eyes="static" aria-hidden="true"></span></span>
               <span class="notif__body">
@@ -268,7 +302,7 @@
       <div class="container manifesto__inner">
         <span class="eyes eyes--manifesto" data-eyes="static" aria-hidden="true"></span>
         <h2 class="manifesto__title reveal">Tu es aveugle.<br /><em>C'est voulu.</em></h2>
-        <p class="manifesto__text" data-words>Sans aperçu, personne ne pose pour la photo. Tu ne vérifies pas si tu es bien dessus, tu ne fais pas défiler les clichés des autres. Tu vis la soirée, et le lendemain, l'album lui ressemble enfin.</p>
+        <p class="manifesto__text" data-words>Sans aperçu, personne ne pose pour la photo. Tu ne vérifies pas si tu es bien dessus, tu ne fais pas défiler les clichés des autres. Tu vis la soirée, et le lendemain, l'album photo lui ressemble enfin. Comme un appareil jetable, sans la pellicule à développer.</p>
       </div>
     </section>
 
@@ -305,7 +339,7 @@
           <article class="cell cell--create reveal">
             <div class="cell__text">
               <h3>Une room en 30 secondes.</h3>
-              <p>Un nom, une couleur, une heure de coffre. Publique ou privée, sur une soirée ou tout un week-end.</p>
+              <p>Un nom, une couleur, une heure de coffre. Publique ou privée, pour un anniversaire, une soirée ou tout un week-end.</p>
               <div class="swatches" role="radiogroup" aria-label="Couleur de la room" data-swatches>
                 <button role="radio" aria-checked="true" aria-label="Braise" style="--c:#D93D14"></button>
                 <button role="radio" aria-checked="false" aria-label="Lagune" style="--c:#3FB8A6"></button>
@@ -326,7 +360,7 @@
           <!-- 2. Rejoindre -->
           <article class="cell cell--join reveal">
             <h3>Rejoins avec un code.</h3>
-            <p>Six caractères, un lien ou un QR. Une fois la room lancée, plus personne n'entre.</p>
+            <p>Six caractères, un lien ou un QR code à poser sur les tables. Une fois la room lancée, plus personne n'entre.</p>
             <div class="code" data-code aria-hidden="true">
               <span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
@@ -369,9 +403,42 @@
               <img src="assets/screens/10-album-par-regard.webp" alt="Album Wuuti trié par regard, photo par photo de chaque invité." width="600" height="1305" loading="lazy" />
             </div>
             <div class="cell__text">
-              <h3>L'album, par heure ou par regard.</h3>
-              <p>Revis la nuit dans l'ordre, ou à travers les yeux de chacun. Likes et commentaires, le lendemain seulement.</p>
+              <h3>Un album partagé, par heure ou par regard.</h3>
+              <p>Toutes les photos des invités au même endroit. Revis la nuit dans l'ordre, ou à travers les yeux de chacun. Likes et commentaires, le lendemain seulement.</p>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OCCASIONS -->
+    <section class="occasions day" id="occasions" data-day>
+      <div class="container">
+        <h2 class="section-title reveal">Pour toutes les soirées<br />qui méritent un album.</h2>
+        <div class="occasions__grid">
+          <article class="occasion reveal">
+            <h3>Anniversaire</h3>
+            <p>Les photos de l'anniversaire prises par tous les invités, pas seulement par celui qui tient le téléphone. Le lendemain, le cadeau, c'est l'album.</p>
+          </article>
+          <article class="occasion reveal">
+            <h3>Mariage</h3>
+            <p>L'appareil photo jetable sur les tables, sans les appareils à racheter ni les pellicules à développer. Un QR code, et chaque invité shoote depuis son téléphone.</p>
+          </article>
+          <article class="occasion reveal">
+            <h3>EVJF et EVG</h3>
+            <p>Ce qui se passe à l'enterrement de vie de jeune fille reste dans le coffre, jusqu'au lendemain. Et pas de spectateurs si la room est privée.</p>
+          </article>
+          <article class="occasion reveal">
+            <h3>Week-end entre amis</h3>
+            <p>Une room sur plusieurs jours, des pings pendant tout le séjour, et un seul album partagé à la fin au lieu de dix conversations.</p>
+          </article>
+          <article class="occasion reveal">
+            <h3>Soirée étudiante</h3>
+            <p>Crémaillère, soirée d'intégration, gala : trente participants gratuits, et personne ne passe la soirée le nez dans la galerie.</p>
+          </article>
+          <article class="occasion reveal">
+            <h3>Nouvel An</h3>
+            <p>Le coffre s'ouvre le 1er janvier à l'heure choisie. Première surprise de l'année, pour tout le monde en même temps.</p>
           </article>
         </div>
       </div>
@@ -430,6 +497,22 @@
           <div class="faq__item reveal">
             <h3><button type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-b">Je peux être dans deux rooms à la fois ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
             <div class="faq__panel" id="faq-5" role="region" aria-labelledby="faq-5-b"><div><p>Non, une seule à la fois. Tu es à une soirée, pas à trois.</p></div></div>
+          </div>
+          <div class="faq__item reveal">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-6" id="faq-6-b">Comment récupérer les photos de tous les invités ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-6" role="region" aria-labelledby="faq-6-b"><div><p>Tu n'as rien à récupérer. Chaque photo prise dans la room part directement dans le même album partagé, qui s'ouvre pour tout le monde le lendemain. Plus besoin de relancer le groupe WhatsApp.</p></div></div>
+          </div>
+          <div class="faq__item reveal">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-7" id="faq-7-b">Wuuti, c'est un appareil photo jetable ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-7" role="region" aria-labelledby="faq-7-b"><div><p>C'est l'esprit : pas d'aperçu, pas de retouche, et on découvre les photos plus tard. Sauf qu'ici, pas de pellicule à développer ni d'appareil à distribuer : chaque invité utilise son téléphone.</p></div></div>
+          </div>
+          <div class="faq__item reveal">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-8" id="faq-8-b">Quelle différence avec BeReal ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-8" role="region" aria-labelledby="faq-8-b"><div><p>BeReal, c'est une photo par jour avec tes amis. Wuuti, c'est le temps d'un événement : chacun reçoit ses pings à un moment différent, personne ne voit rien pendant la soirée, et tout se révèle d'un coup le lendemain.</p></div></div>
+          </div>
+          <div class="faq__item reveal">
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-9" id="faq-9-b">Ça marche pour un mariage ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-9" role="region" aria-labelledby="faq-9-b"><div><p>Oui. Les invités rejoignent avec un QR code sur les tables, et vous découvrez le lendemain le mariage vu par chacun d'eux. Au-delà de 30 invités, la formule Premium à 0,99 € ouvre la room sans limite.</p></div></div>
           </div>
         </div>
       </div>

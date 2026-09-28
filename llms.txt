@@ -1,6 +1,6 @@
 # Wuuti
 
-> Wuuti est une application photo pour les soirées, à l'aveugle. Pendant l'événement, chaque participant reçoit des pings à des moments différents et a deux minutes pour prendre une photo brute, sans filtre ni aperçu. Personne ne voit les photos avant le lendemain : à l'heure choisie par l'hôte, le coffre s'ouvre et tout le monde découvre l'album en même temps.
+> Wuuti est une application photo pour les soirées, à l'aveugle : l'esprit de l'appareil photo jetable, en appli. Pensée pour les anniversaires, mariages, EVJF/EVG, week-ends entre amis et soirées étudiantes. Pendant l'événement, chaque participant reçoit des pings à des moments différents et a deux minutes pour prendre une photo brute, sans filtre ni aperçu. Personne ne voit les photos avant le lendemain : à l'heure choisie par l'hôte, le coffre s'ouvre et tout le monde découvre l'album en même temps.
 
 Statut : pas encore sortie, bientôt sur iPhone et Android.
 
@@ -11,6 +11,12 @@ Statut : pas encore sortie, bientôt sur iPhone et Android.
 - Pings : densité calme, recommandée ou intense ; chacun sonne à son moment.
 - Lives publics : des inconnus peuvent regarder une room publique ; ses invités, jamais.
 - Album : trié par heure ou par regard (photos de chaque invité), likes et commentaires le lendemain.
+
+## Occasions
+
+- Anniversaire, mariage (QR code sur les tables), EVJF et EVG, week-end entre amis, soirée étudiante, Nouvel An.
+- Toutes les photos des invités arrivent dans un seul album photo partagé, sans avoir à les récupérer une par une.
+- Différence avec BeReal : Wuuti dure le temps d'un événement, les pings tombent à des moments différents pour chacun, et rien n'est visible avant le lendemain.
 
 ## Règles
 
