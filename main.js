@@ -340,7 +340,7 @@
     .join(" ");
   watch(words, (inView) => inView && words.classList.add("is-in"), { once: true, threshold: 0.5 });
 
-  const photos = Array.from({ length: 12 }, (_, i) => `assets/photos/p${i}.webp`);
+  const photos = Array.from({ length: 12 }, (_, i) => `assets/photos/p${i}.webp?v=2`);
   // Une légende par polaroïd, dans l'ordre des photos : les six premières
   // (visibles sur mobile) couvrent chacune une occasion.
   const captions = [
