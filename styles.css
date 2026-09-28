@@ -671,7 +671,7 @@ body::after {
   transition: transform 900ms var(--ease-out);
 }
 /* Ouvert : le bloc remonte un peu pour s'éloigner de la rangée basse de polaroïds. */
-.vault.is-open .vault__center { transform: translateY(-5vh); }
+.vault.is-open .vault__center { transform: translateY(-6vh); }
 .vault__dial {
   position: relative;
   width: clamp(200px, 26vw, 280px);
