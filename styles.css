@@ -1054,22 +1054,9 @@ body::after {
 .final__title { font-size: clamp(2.4rem, 6vw, 4.8rem); letter-spacing: -0.05em; }
 .final__sub { margin-top: 20px; max-width: 42ch; text-wrap: balance; }
 .final__stores { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 36px 0 0; }
-/* Badges non cliquables : pas de hover, pas d'état pressé */
-.store {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  height: 60px;
-  padding: 0 24px 0 20px;
-  border-radius: 999px;
-  background: var(--paper2);
-  color: var(--ink-muted);
-  box-shadow: inset 0 0 0 1.5px var(--paper-line);
-  cursor: default;
-}
-.store .icon { font-size: 26px; color: var(--ink-text); opacity: 0.55; }
-.store__txt { display: grid; text-align: left; line-height: 1.1; font-size: 17px; font-weight: 650; }
-.store__txt small { font-size: 11px; font-weight: 600; color: var(--ember-deep); }
+/* Badges officiels Apple / Google : fichiers d'origine, non modifiés */
+.store { display: flex; }
+.store img { display: block; height: 56px; width: auto; }
 
 /* ---------- Footer ---------- */
 .footer { background: var(--paper2); padding: 40px 0 calc(40px + env(safe-area-inset-bottom)); }
