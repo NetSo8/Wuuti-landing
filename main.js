@@ -312,7 +312,6 @@
   const setStep = (i) => {
     steps.forEach((s, j) => s.classList.toggle("is-active", j === i));
     stepImgs.forEach((im, j) => im.classList.toggle("is-active", j === i));
-    stepsList.style.setProperty("--progress", ((i + 0.5) / steps.length).toFixed(3));
   };
   // Au scroll plutôt qu'en IntersectionObserver : une bande fine au centre
   // de l'écran se fait sauter par un scroll rapide et l'étape reste figée.
@@ -323,6 +322,10 @@
     let i = 0;
     steps.forEach((s, j) => { if (s.getBoundingClientRect().top <= mid) i = j; });
     if (i !== current) { current = i; setStep(i); }
+    // Le trait suit le scroll et se remplit en entier une fois la liste passée
+    const r = stepsList.getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, (mid - r.top) / r.height));
+    stepsList.style.setProperty("--progress", p.toFixed(4));
   };
   const queueStep = () => { if (!stepRaf) stepRaf = requestAnimationFrame(syncStep); };
   addEventListener("scroll", queueStep, { passive: true });

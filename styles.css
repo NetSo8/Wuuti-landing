@@ -572,7 +572,7 @@ body::after {
 .ritual__steps::after {
   height: calc((100% - 24px) * var(--progress, 0));
   background: var(--ember);
-  transition: height 600ms var(--ease-out);
+  transition: height 120ms linear;
 }
 .ritual__step {
   position: relative;
