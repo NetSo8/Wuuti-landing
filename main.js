@@ -314,8 +314,20 @@
     stepImgs.forEach((im, j) => im.classList.toggle("is-active", j === i));
     stepsList.style.setProperty("--progress", ((i + 0.5) / steps.length).toFixed(3));
   };
-  setStep(0);
-  watch(steps, (inView, e) => inView && setStep(+e.target.dataset.ritualStep), { rootMargin: "-48% 0px -48% 0px" });
+  // Au scroll plutôt qu'en IntersectionObserver : une bande fine au centre
+  // de l'écran se fait sauter par un scroll rapide et l'étape reste figée.
+  let current = -1, stepRaf = null;
+  const syncStep = () => {
+    stepRaf = null;
+    const mid = innerHeight / 2;
+    let i = 0;
+    steps.forEach((s, j) => { if (s.getBoundingClientRect().top <= mid) i = j; });
+    if (i !== current) { current = i; setStep(i); }
+  };
+  const queueStep = () => { if (!stepRaf) stepRaf = requestAnimationFrame(syncStep); };
+  addEventListener("scroll", queueStep, { passive: true });
+  addEventListener("resize", queueStep);
+  syncStep();
 
   /* ------------------------------------------------------------------
      Manifeste : les mots s'allument un à un

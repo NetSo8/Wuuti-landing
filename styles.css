@@ -572,10 +572,11 @@ body::after {
   flex-direction: column;
   justify-content: center;
   padding-left: 80px;
-  opacity: 0.32;
-  transition: opacity 500ms var(--ease-out);
 }
-.ritual__step.is-active { opacity: 1; }
+/* On estompe le texte, pas le <li> : une opacité sur le <li> rendrait
+   l'icône translucide et laisserait voir le trait de progression à travers. */
+.ritual__step > :not(.ritual__icon) { opacity: 0.32; transition: opacity 500ms var(--ease-out); }
+.ritual__step.is-active > :not(.ritual__icon) { opacity: 1; }
 .ritual__icon {
   position: absolute;
   left: 0;
@@ -600,7 +601,8 @@ body::after {
 @media (max-width: 899px) {
   .ritual__grid { grid-template-columns: 1fr; }
   .ritual__stage { display: none; }
-  .ritual__step { min-height: auto; padding: 0 0 72px 68px; opacity: 1; justify-content: flex-start; }
+  .ritual__step { min-height: auto; padding: 0 0 72px 68px; justify-content: flex-start; }
+  .ritual__step > :not(.ritual__icon) { opacity: 1; }
   .ritual__icon { top: 0; translate: none; }
   .ritual__inline {
     display: block;
