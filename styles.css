@@ -20,6 +20,13 @@
   font-style: italic;
   font-display: swap;
 }
+/* Caveat réduite aux légendes des polaroïds du coffre. */
+@font-face {
+  font-family: "Caveat";
+  src: url("assets/fonts/caveat.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
 
 :root {
   /* Nuit */
@@ -702,6 +709,7 @@ body::after {
 .vault__photos { position: absolute; inset: 0; pointer-events: none; }
 .polaroid {
   position: absolute;
+  margin: 0;
   left: 50%;
   top: 50%;
   width: clamp(84px, min(10.5vw, 15vh), 168px);
@@ -717,6 +725,18 @@ body::after {
   transition-delay: calc(var(--i) * 55ms);
 }
 .polaroid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 2px; }
+.polaroid figcaption {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: 3px;
+  font: 600 clamp(0.72rem, min(1.05vw, 1.5vh), 1.05rem) / 1.2 "Caveat", "Bradley Hand", cursive;
+  color: #2a3437;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .vault.is-open .polaroid.is-ready {
   opacity: 1;
   transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1) rotate(var(--r));
@@ -728,6 +748,7 @@ body::after {
   .vault { height: 200vh; }
   .vault__dial { width: 150px; }
   .polaroid { width: 76px; padding: 5px 5px 16px; }
+  .polaroid figcaption { font-size: 0.66rem; bottom: 1px; }
 }
 
 /* ---------- Jour : tokens ---------- */

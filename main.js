@@ -341,6 +341,13 @@
   watch(words, (inView) => inView && words.classList.add("is-in"), { once: true, threshold: 0.5 });
 
   const photos = Array.from({ length: 12 }, (_, i) => `assets/photos/p${i}.webp`);
+  // Une légende par polaroïd, dans l'ordre des photos : les six premières
+  // (visibles sur mobile) couvrent chacune une occasion.
+  const captions = [
+    "Les 18 ans de Léa", "EVJF de Camille", "Mariage J & T", "Le week-end",
+    "Crémaillère", "Minuit pile", "Surprise !", "1er janvier",
+    "Soirée d'inté", "Première danse", "Lac, 23h", "Les témoins",
+  ];
 
   /* ------------------------------------------------------------------
      Le coffre : compte à rebours, puis la nuit bascule en jour
@@ -383,7 +390,7 @@
   // Les photos partent quand on approche du coffre (pas au chargement de la page),
   // et chaque polaroïd n'est révélé qu'une fois son image chargée : jamais de cadre vide.
   const polaroids = spots.map(() => {
-    const p = document.createElement("div");
+    const p = document.createElement("figure");
     p.className = "polaroid";
     photoHost.appendChild(p);
     return p;
@@ -398,7 +405,9 @@
       img.addEventListener("load", () => p.classList.add("is-ready"), { once: true });
       img.addEventListener("error", () => { img.src = photos[(i + 5) % photos.length]; }, { once: true });
       img.src = photos[i];
-      p.appendChild(img);
+      const cap = document.createElement("figcaption");
+      cap.textContent = captions[i];
+      p.append(img, cap);
     });
   }, { once: true, rootMargin: "150% 0px" });
   matchMedia("(max-width: 767px)").addEventListener("change", placeSpots);
