@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Wuuti : l'appareil photo jetable de tes soirées, en appli</title>
-  <meta name="description" content="Wuuti, l'appli appareil photo jetable pour soirées, anniversaires, mariages et EVJF : tes invités prennent les photos à l'aveugle, l'album photo partagé se révèle le lendemain." />
+  <title data-i18n="meta.title">Wuuti : l'appareil photo jetable de tes soirées, en appli</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="Wuuti, l'appli appareil photo jetable pour soirées, anniversaires, mariages et EVJF : tes invités prennent les photos à l'aveugle, l'album photo partagé se révèle le lendemain." />
   <link rel="canonical" href="https://wuuti.fr/" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0C1517" />
@@ -13,15 +13,15 @@
   <meta property="og:site_name" content="Wuuti" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:url" content="https://wuuti.fr/" />
-  <meta property="og:title" content="Wuuti : l'appareil photo jetable de tes soirées, en appli" />
-  <meta property="og:description" content="Shoote la soirée. Découvre-la demain. Les photos de tous tes invités, sans aperçu, réunies dans un album partagé qui s'ouvre le lendemain." />
+  <meta property="og:title" data-i18n-attr="content:meta.title" content="Wuuti : l'appareil photo jetable de tes soirées, en appli" />
+  <meta property="og:description" data-i18n-attr="content:meta.og" content="Shoote la soirée. Découvre-la demain. Les photos de tous tes invités, sans aperçu, réunies dans un album partagé qui s'ouvre le lendemain." />
   <meta property="og:image" content="https://wuuti.fr/assets/og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Wuuti : Shoote la soirée. Découvre-la demain. L'app photo de soirée, à l'aveugle." />
+  <meta property="og:image:alt" data-i18n-attr="content:meta.ogAlt" content="Wuuti : Shoote la soirée. Découvre-la demain. L'app photo de soirée, à l'aveugle." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Wuuti : l'appareil photo jetable de tes soirées, en appli" />
-  <meta name="twitter:description" content="Shoote la soirée. Découvre-la demain." />
+  <meta name="twitter:title" data-i18n-attr="content:meta.title" content="Wuuti : l'appareil photo jetable de tes soirées, en appli" />
+  <meta name="twitter:description" data-i18n-attr="content:meta.twitter" content="Shoote la soirée. Découvre-la demain." />
   <meta name="twitter:image" content="https://wuuti.fr/assets/og.jpg" />
 
   <script type="application/ld+json">
@@ -160,7 +160,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="preload" href="assets/fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/screens/23-ping-camera.webp?v=2" as="image" />
-  <link rel="stylesheet" href="styles.css?v=24" />
+  <link rel="stylesheet" href="styles.css?v=26" />
 </head>
 <body>
   <!-- Icônes Phosphor (MIT), en sprite : pas de CSS ni de police externe -->
@@ -171,12 +171,14 @@
     <symbol id="i-check-circle" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
     <symbol id="i-check" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol>
     <symbol id="i-google-play-logo" viewBox="0 0 256 256"><path d="M239.82,114.18,72,18.16a16,16,0,0,0-16.12,0A15.68,15.68,0,0,0,48,31.87V224.13a15.68,15.68,0,0,0,7.92,13.67,16,16,0,0,0,16.12,0l167.78-96a15.76,15.76,0,0,0,0-27.64ZM160,139.31l18.92,18.92-88.5,50.66ZM90.4,47.1l88.53,50.67L160,116.69ZM193.31,150l-22-22,22-22,38.43,22Z"/></symbol>
+    <symbol id="i-caret-down" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.25"/><path d="M2.75 12h18.5"/><path d="M12 2.75c2.6 2.5 4 5.7 4 9.25s-1.4 6.75-4 9.25c-2.6-2.5-4-5.7-4-9.25s1.4-6.75 4-9.25Z"/></g></symbol>
     <symbol id="i-info" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z"/></symbol>
     <symbol id="i-lock-simple" viewBox="0 0 256 256"><path d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96Z"/></symbol>
     <symbol id="i-plus" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol>
     <symbol id="i-sun-horizon" viewBox="0 0 256 256"><path d="M248,160a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H56.45a73.54,73.54,0,0,1-.45-8,72,72,0,0,1,144,0,73.54,73.54,0,0,1-.45,8H240A8,8,0,0,1,248,160Zm-40,32H48a8,8,0,0,0,0,16H208a8,8,0,0,0,0-16ZM80.84,59.58a8,8,0,0,0,14.32-7.16l-8-16a8,8,0,0,0-14.32,7.16ZM20.42,103.16l16,8a8,8,0,1,0,7.16-14.31l-16-8a8,8,0,1,0-7.16,14.31ZM216,112a8,8,0,0,0,3.57-.84l16-8a8,8,0,1,0-7.16-14.31l-16,8A8,8,0,0,0,216,112ZM164.42,63.16a8,8,0,0,0,10.74-3.58l8-16a8,8,0,0,0-14.32-7.16l-8,16A8,8,0,0,0,164.42,63.16Z"/></symbol>
   </svg>
-  <a class="skip" href="#main">Aller au contenu</a>
+  <a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
 
   <!-- NAV -->
   <header class="nav" data-nav>
@@ -184,14 +186,24 @@
       <a href="#top" class="wordmark">
         w<span class="eyes" data-eyes data-eyes-logo><span class="sr">uu</span></span>ti
       </a>
-      <nav class="nav__links" aria-label="Sections">
-        <a href="#rituel">Le rituel</a>
-        <a href="#occasions">Occasions</a>
-        <a href="#tarifs">Tarifs</a>
-        <a href="#questions">Questions</a>
+      <nav class="nav__links" aria-label="Sections" data-i18n-attr="aria-label:nav.aria">
+        <a href="#rituel" data-i18n="nav.ritual">Le rituel</a>
+        <a href="#occasions" data-i18n="nav.occasions">Occasions</a>
+        <a href="#tarifs" data-i18n="nav.pricing">Tarifs</a>
+        <a href="#questions" data-i18n="nav.faq">Questions</a>
       </nav>
+      <div class="lang" data-lang>
+        <button type="button" class="lang__btn" aria-haspopup="listbox" aria-expanded="false" data-lang-btn>
+          <svg class="icon lang__globe" aria-hidden="true"><use href="#i-globe"/></svg>
+          <span class="sr" data-i18n="nav.language">Langue</span>
+          <span class="lang__code" data-lang-code>FR</span>
+          <svg class="icon lang__caret" aria-hidden="true"><use href="#i-caret-down"/></svg>
+        </button>
+        <!-- liste construite par i18n.js -->
+        <ul class="lang__menu" role="listbox" tabindex="-1" data-lang-menu data-i18n-attr="aria-label:nav.language"></ul>
+      </div>
       <a href="#obtenir" class="btn btn--ember btn--sm" data-magnetic>
-        <span>Bientôt disponible</span>
+        <span data-i18n="nav.cta">Bientôt disponible</span>
       </a>
     </div>
   </header>
@@ -205,18 +217,18 @@
         <div class="hero__copy">
           <p class="soon reveal-load">
             <span class="soon__dot" aria-hidden="true"></span>
-            L'appareil photo jetable, en appli · bientôt sur iPhone et Android
+            <span data-i18n="hero.soon">L'appareil photo jetable, en appli · bientôt sur iPhone et Android</span>
           </p>
           <h1 class="hero__title">
-            <span class="line"><span>Shoote la soirée.</span></span>
-            <span class="line"><span>Découvre-la <em>demain.</em></span></span>
+            <span class="line"><span data-i18n="hero.title1">Shoote la soirée.</span></span>
+            <span class="line"><span data-i18n-html="hero.title2">Découvre-la <em>demain.</em></span></span>
           </h1>
-          <p class="hero__sub reveal-load" style="--d: 120ms">
+          <p class="hero__sub reveal-load" style="--d: 120ms" data-i18n="hero.sub">
             L'appli photo de soirée où chaque invité shoote à l'aveugle. À chaque ping, deux minutes pour une photo brute. Le lendemain, le coffre s'ouvre sur l'album partagé de toute la soirée.
           </p>
           <div class="hero__ctas reveal-load" style="--d: 200ms">
             <a href="#rituel" class="btn btn--ember btn--lg" data-magnetic>
-              <span>Voir le rituel</span>
+              <span data-i18n="hero.cta">Voir le rituel</span>
               <svg class="icon btn__arrow btn__arrow--down" aria-hidden="true"><use href="#i-arrow-down"/></svg>
             </a>
           </div>
@@ -230,12 +242,12 @@
             <img src="assets/screens/21-live.webp" alt="" width="600" height="1305" loading="eager" />
           </div>
           <div class="phone phone--front">
-            <img src="assets/screens/23-ping-camera.webp?v=2" alt="Appli photo de soirée Wuuti : un ping sonne, il reste 1 minute 16 pour prendre la photo." width="600" height="1305" fetchpriority="high" />
+            <img src="assets/screens/23-ping-camera.webp?v=2" alt="Appli photo de soirée Wuuti : un ping sonne, il reste 1 minute 16 pour prendre la photo." data-i18n-attr="alt:hero.alt" width="600" height="1305" fetchpriority="high" />
             <div class="notif" data-notif aria-hidden="true">
               <span class="notif__icon"><span class="eyes eyes--xs" data-eyes="static" aria-hidden="true"></span></span>
               <span class="notif__body">
-                <span class="notif__meta"><b>WUUTI</b> Anniversaire de Camille <span class="notif__now">maintenant</span></span>
-                <span class="notif__text">C'est le moment. Tu as <span class="tabular" data-notif-count>2:00</span>.</span>
+                <span class="notif__meta" data-i18n-html="notif.meta"><b>WUUTI</b> Anniversaire de Camille <span class="notif__now">maintenant</span></span>
+                <span class="notif__text" data-i18n-html="notif.text">C'est le moment. Tu as <span class="tabular" data-notif-count>2:00</span>.</span>
               </span>
             </div>
           </div>
@@ -247,16 +259,16 @@
     <div class="marquee">
       <div class="marquee__track">
         <div class="marquee__group">
-          <span>Pas de chat</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
-          <span>Pas de filtre</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
-          <span>Pas de rattrapage</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
-          <span>Pas d'aperçu</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span data-i18n="marquee.chat">Pas de chat</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span data-i18n="marquee.filter">Pas de filtre</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span data-i18n="marquee.catchup">Pas de rattrapage</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span data-i18n="marquee.preview">Pas d'aperçu</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
         </div>
         <div class="marquee__group" aria-hidden="true">
-          <span>Pas de chat</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
-          <span>Pas de filtre</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
-          <span>Pas de rattrapage</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
-          <span>Pas d'aperçu</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span data-i18n="marquee.chat">Pas de chat</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span data-i18n="marquee.filter">Pas de filtre</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span data-i18n="marquee.catchup">Pas de rattrapage</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
+          <span data-i18n="marquee.preview">Pas d'aperçu</span><span class="eyes eyes--mq" data-eyes="static" aria-hidden="true"></span>
         </div>
       </div>
     </div>
@@ -264,7 +276,7 @@
     <!-- LE RITUEL : sticky scroll -->
     <section class="ritual" id="rituel">
       <div class="container">
-        <h2 class="section-title reveal">Trois temps.<br />Une seule règle : ne rien voir.</h2>
+        <h2 class="section-title reveal" data-i18n-html="ritual.title">Trois temps.<br />Une seule règle : ne rien voir.</h2>
         <div class="ritual__grid">
           <div class="ritual__stage" aria-hidden="true">
             <div class="phone phone--stage">
@@ -276,21 +288,21 @@
           <ol class="ritual__steps">
             <li class="ritual__step is-active" data-ritual-step="0">
               <span class="ritual__icon"><svg class="icon" aria-hidden="true"><use href="#i-bell-ringing"/></svg></span>
-              <h3>Ça sonne.</h3>
-              <p>Chacun reçoit ses pings à un moment différent. Deux minutes pour dégainer, caméra avant ou arrière, sans filtre.</p>
-              <img class="ritual__inline" src="assets/screens/22-ping-notif.webp?v=2" alt="Notification Wuuti : c'est le moment, tu as 2 minutes." width="600" height="1305" loading="lazy" />
+              <h3 data-i18n="ritual.1.title">Ça sonne.</h3>
+              <p data-i18n="ritual.1.text">Chacun reçoit ses pings à un moment différent. Deux minutes pour dégainer, caméra avant ou arrière, sans filtre.</p>
+              <img class="ritual__inline" src="assets/screens/22-ping-notif.webp?v=2" alt="Notification Wuuti : c'est le moment, tu as 2 minutes." data-i18n-attr="alt:ritual.1.alt" width="600" height="1305" loading="lazy" />
             </li>
             <li class="ritual__step" data-ritual-step="1">
               <span class="ritual__icon"><svg class="icon" aria-hidden="true"><use href="#i-lock-simple"/></svg></span>
-              <h3>Tu shootes. Tu ne vois rien.</h3>
-              <p>Ta photo file au coffre, scellée. Celles des autres aussi. Tu vis la soirée au lieu de la regarder sur ton écran.</p>
-              <img class="ritual__inline" src="assets/screens/21-live.webp" alt="Écran Wuuti pendant la soirée : tu es aveugle, c'est voulu." width="600" height="1305" loading="lazy" />
+              <h3 data-i18n="ritual.2.title">Tu shootes. Tu ne vois rien.</h3>
+              <p data-i18n="ritual.2.text">Ta photo file au coffre, scellée. Celles des autres aussi. Tu vis la soirée au lieu de la regarder sur ton écran.</p>
+              <img class="ritual__inline" src="assets/screens/21-live.webp" alt="Écran Wuuti pendant la soirée : tu es aveugle, c'est voulu." data-i18n-attr="alt:ritual.2.alt" width="600" height="1305" loading="lazy" />
             </li>
             <li class="ritual__step" data-ritual-step="2">
               <span class="ritual__icon"><svg class="icon" aria-hidden="true"><use href="#i-sun-horizon"/></svg></span>
-              <h3>Le lendemain, tout s'ouvre.</h3>
-              <p>À l'heure choisie par l'hôte, le coffre s'ouvre pour tout le monde. Même surprise, même seconde.</p>
-              <img class="ritual__inline" src="assets/screens/29-coffre-ouvert.webp" alt="Écran Wuuti : le coffre est ouvert, 23 photos." width="600" height="1305" loading="lazy" />
+              <h3 data-i18n="ritual.3.title">Le lendemain, tout s'ouvre.</h3>
+              <p data-i18n="ritual.3.text">À l'heure choisie par l'hôte, le coffre s'ouvre pour tout le monde. Même surprise, même seconde.</p>
+              <img class="ritual__inline" src="assets/screens/29-coffre-ouvert.webp" alt="Écran Wuuti : le coffre est ouvert, 23 photos." data-i18n-attr="alt:ritual.3.alt" width="600" height="1305" loading="lazy" />
             </li>
           </ol>
         </div>
@@ -301,8 +313,8 @@
     <section class="manifesto" id="aveugle">
       <div class="container manifesto__inner">
         <span class="eyes eyes--manifesto" data-eyes="static" aria-hidden="true"></span>
-        <h2 class="manifesto__title reveal">Tu es aveugle.<br /><em>C'est voulu.</em></h2>
-        <p class="manifesto__text" data-words>Sans aperçu, personne ne pose pour la photo. Tu ne vérifies pas si tu es bien dessus, tu ne fais pas défiler les clichés des autres. Tu vis la soirée, et le lendemain, l'album photo lui ressemble enfin. Comme un appareil jetable, sans la pellicule à développer.</p>
+        <h2 class="manifesto__title reveal" data-i18n-html="manifesto.title">Tu es aveugle.<br /><em>C'est voulu.</em></h2>
+        <p class="manifesto__text" data-words data-i18n="manifesto.text">Sans aperçu, personne ne pose pour la photo. Tu ne vérifies pas si tu es bien dessus, tu ne fais pas défiler les clichés des autres. Tu vis la soirée, et le lendemain, l'album photo lui ressemble enfin. Comme un appareil jetable, sans la pellicule à développer.</p>
       </div>
     </section>
 
@@ -318,11 +330,11 @@
           </div>
           <div class="vault__sealed">
             <p class="vault__time tabular" data-vault-countdown>--:--:--</p>
-            <p class="vault__caption">Tout le monde découvre l'album demain à 11h00.</p>
+            <p class="vault__caption" data-i18n="vault.sealed">Tout le monde découvre l'album demain à 11h00.</p>
           </div>
           <div class="vault__open">
-            <h2 class="vault__title">Le coffre est ouvert.</h2>
-            <p class="vault__caption">Tout le monde découvre l'album en même temps. Personne n'a triché, même pas l'hôte.</p>
+            <h2 class="vault__title" data-i18n="vault.title">Le coffre est ouvert.</h2>
+            <p class="vault__caption" data-i18n="vault.open">Tout le monde découvre l'album en même temps. Personne n'a triché, même pas l'hôte.</p>
           </div>
         </div>
       </div>
@@ -332,79 +344,79 @@
     <!-- BENTO (jour) -->
     <section class="features day" id="fonctions" data-day>
       <div class="container">
-        <h2 class="section-title reveal">Tout pour la soirée.<br />Rien pour la distraire.</h2>
+        <h2 class="section-title reveal" data-i18n-html="features.title">Tout pour la soirée.<br />Rien pour la distraire.</h2>
 
         <div class="bento">
           <!-- 1. Créer -->
           <article class="cell cell--create reveal">
             <div class="cell__text">
-              <h3>Une room en 30 secondes.</h3>
-              <p>Un nom, une couleur, une heure de coffre. Publique ou privée, pour un anniversaire, une soirée ou tout un week-end.</p>
-              <div class="swatches" role="radiogroup" aria-label="Couleur de la room" data-swatches>
-                <button role="radio" aria-checked="true" aria-label="Braise" style="--c:#D93D14"></button>
-                <button role="radio" aria-checked="false" aria-label="Lagune" style="--c:#3FB8A6"></button>
-                <button role="radio" aria-checked="false" aria-label="Soleil" style="--c:#E8B83C"></button>
-                <button role="radio" aria-checked="false" aria-label="Lilas" style="--c:#9C8CF0"></button>
-                <button role="radio" aria-checked="false" aria-label="Pivoine" style="--c:#EA6FA0"></button>
-                <button role="radio" aria-checked="false" aria-label="Mousse" style="--c:#7FB45A"></button>
+              <h3 data-i18n="create.title">Une room en 30 secondes.</h3>
+              <p data-i18n="create.text">Un nom, une couleur, une heure de coffre. Publique ou privée, pour un anniversaire, une soirée ou tout un week-end.</p>
+              <div class="swatches" role="radiogroup" aria-label="Couleur de la room" data-i18n-attr="aria-label:create.colors" data-swatches>
+                <button role="radio" aria-checked="true" aria-label="Braise" data-i18n-attr="aria-label:swatch.ember" style="--c:#D93D14"></button>
+                <button role="radio" aria-checked="false" aria-label="Lagune" data-i18n-attr="aria-label:swatch.lagoon" style="--c:#3FB8A6"></button>
+                <button role="radio" aria-checked="false" aria-label="Soleil" data-i18n-attr="aria-label:swatch.sun" style="--c:#E8B83C"></button>
+                <button role="radio" aria-checked="false" aria-label="Lilas" data-i18n-attr="aria-label:swatch.lilac" style="--c:#9C8CF0"></button>
+                <button role="radio" aria-checked="false" aria-label="Pivoine" data-i18n-attr="aria-label:swatch.peony" style="--c:#EA6FA0"></button>
+                <button role="radio" aria-checked="false" aria-label="Mousse" data-i18n-attr="aria-label:swatch.moss" style="--c:#7FB45A"></button>
               </div>
             </div>
             <div class="cover" data-cover aria-hidden="true">
               <div class="cover__rings"><span></span><span></span><span></span><span></span></div>
-              <span class="cover__chip"><svg class="icon" aria-hidden="true"><use href="#i-lock-simple"/></svg> Privée</span>
-              <span class="cover__name">Anniversaire</span>
-              <span class="cover__meta">Commence aujourd'hui à 21h30</span>
+              <span class="cover__chip"><svg class="icon" aria-hidden="true"><use href="#i-lock-simple"/></svg> <span data-i18n="cover.chip">Privée</span></span>
+              <span class="cover__name" data-i18n="cover.name">Anniversaire</span>
+              <span class="cover__meta" data-i18n="cover.meta">Commence aujourd'hui à 21h30</span>
             </div>
           </article>
 
           <!-- 2. Rejoindre -->
           <article class="cell cell--join reveal">
-            <h3>Rejoins avec un code.</h3>
-            <p>Six caractères, un lien ou un QR code à poser sur les tables. Une fois la room lancée, plus personne n'entre.</p>
+            <h3 data-i18n="join.title">Rejoins avec un code.</h3>
+            <p data-i18n="join.text">Six caractères, un lien ou un QR code à poser sur les tables. Une fois la room lancée, plus personne n'entre.</p>
             <div class="code" data-code aria-hidden="true">
               <span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
-            <span class="code__ok" data-code-ok><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg> Anniversaire, 9 participants</span>
+            <span class="code__ok" data-code-ok><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg> <span data-i18n="join.ok">Anniversaire, 9 participants</span></span>
           </article>
 
           <!-- 3. Pings -->
           <article class="cell cell--pings reveal">
             <div class="cell__head">
-              <h3>Chacun sonne à son moment.</h3>
-              <div class="seg" role="radiogroup" aria-label="Densité des pings" data-seg>
-                <button role="radio" aria-checked="false" data-rate="3">Calme</button>
-                <button role="radio" aria-checked="true" data-rate="5">Recommandé</button>
-                <button role="radio" aria-checked="false" data-rate="8">Intense</button>
+              <h3 data-i18n="pings.title">Chacun sonne à son moment.</h3>
+              <div class="seg" role="radiogroup" aria-label="Densité des pings" data-i18n-attr="aria-label:pings.density" data-seg>
+                <button role="radio" aria-checked="false" data-rate="3" data-i18n="pings.calm">Calme</button>
+                <button role="radio" aria-checked="true" data-rate="5" data-i18n="pings.recommended">Recommandé</button>
+                <button role="radio" aria-checked="false" data-rate="8" data-i18n="pings.intense">Intense</button>
                 <span class="seg__thumb" aria-hidden="true"></span>
               </div>
             </div>
             <div class="timeline" data-timeline>
               <!-- rempli par main.js -->
             </div>
-            <div class="timeline__axis" aria-hidden="true"><span>21h</span><span>23h</span><span>1h</span><span>3h</span></div>
+            <div class="timeline__axis" aria-hidden="true"><span data-i18n="axis.1">21h</span><span data-i18n="axis.2">23h</span><span data-i18n="axis.3">1h</span><span data-i18n="axis.4">3h</span></div>
           </article>
 
           <!-- 4. Lives publics -->
           <article class="cell cell--live reveal">
             <div class="cell__text">
-              <span class="live-tag"><span class="live-tag__dot"></span>Live</span>
-              <h3>Spectate les soirées publiques.</h3>
-              <p>Les inconnus regardent en direct. Les invités, eux, restent aveugles jusqu'au coffre.</p>
+              <span class="live-tag"><span class="live-tag__dot"></span><span data-i18n="live.tag">Live</span></span>
+              <h3 data-i18n="live.title">Spectate les soirées publiques.</h3>
+              <p data-i18n="live.text">Les inconnus regardent en direct. Les invités, eux, restent aveugles jusqu'au coffre.</p>
             </div>
             <div class="cell__shot">
-              <img src="assets/screens/32-spectateur.webp" alt="Écran spectateur Wuuti : un live public avec 214 regards." width="600" height="1305" loading="lazy" />
+              <img src="assets/screens/32-spectateur.webp" alt="Écran spectateur Wuuti : un live public avec 214 regards." data-i18n-attr="alt:live.alt" width="600" height="1305" loading="lazy" />
             </div>
           </article>
 
           <!-- 5. Album -->
           <article class="cell cell--album reveal">
             <div class="cell__shot cell__shot--pair">
-              <img src="assets/screens/09-album.webp" alt="Album Wuuti trié par chronologie." width="600" height="1305" loading="lazy" />
-              <img src="assets/screens/10-album-par-regard.webp" alt="Album Wuuti trié par regard, photo par photo de chaque invité." width="600" height="1305" loading="lazy" />
+              <img src="assets/screens/09-album.webp" alt="Album Wuuti trié par chronologie." data-i18n-attr="alt:album.alt1" width="600" height="1305" loading="lazy" />
+              <img src="assets/screens/10-album-par-regard.webp" alt="Album Wuuti trié par regard, photo par photo de chaque invité." data-i18n-attr="alt:album.alt2" width="600" height="1305" loading="lazy" />
             </div>
             <div class="cell__text">
-              <h3>Un album partagé, par heure ou par regard.</h3>
-              <p>Toutes les photos des invités au même endroit. Revis la nuit dans l'ordre, ou à travers les yeux de chacun. Likes et commentaires, le lendemain seulement.</p>
+              <h3 data-i18n="album.title">Un album partagé, par heure ou par regard.</h3>
+              <p data-i18n="album.text">Toutes les photos des invités au même endroit. Revis la nuit dans l'ordre, ou à travers les yeux de chacun. Likes et commentaires, le lendemain seulement.</p>
             </div>
           </article>
         </div>
@@ -414,37 +426,37 @@
     <!-- OCCASIONS -->
     <section class="occasions day" id="occasions" data-day>
       <div class="container">
-        <h2 class="section-title reveal">Pour toutes les soirées<br />qui méritent un album.</h2>
+        <h2 class="section-title reveal" data-i18n-html="occasions.title">Pour toutes les soirées<br />qui méritent un album.</h2>
         <div class="occasions__grid">
           <article class="occasion reveal">
             <svg class="occasion__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27h22M8 27v-8h16v8M8 22.5c2.7 1.6 5.3 1.6 8 0s5.3-1.6 8 0M11 19v-5h10v5M16 14v-3M16 8.5c-1.1-1-1.1-2.4 0-3.8 1.1 1.4 1.1 2.8 0 3.8ZM6 9h.01M26 7h.01M24.5 11.5h.01"/><path class="occasion__trace" d="M5 27h22M8 27v-8h16v8M8 22.5c2.7 1.6 5.3 1.6 8 0s5.3-1.6 8 0M11 19v-5h10v5M16 14v-3M16 8.5c-1.1-1-1.1-2.4 0-3.8 1.1 1.4 1.1 2.8 0 3.8ZM6 9h.01M26 7h.01M24.5 11.5h.01" pathLength="1"/></svg>
-            <h3>Anniversaire</h3>
-            <p>Les photos de l'anniversaire prises par tous les invités, pas seulement par celui qui tient le téléphone. Le lendemain, le cadeau, c'est l'album.</p>
+            <h3 data-i18n="occ.birthday.title">Anniversaire</h3>
+            <p data-i18n="occ.birthday.text">Les photos de l'anniversaire prises par tous les invités, pas seulement par celui qui tient le téléphone. Le lendemain, le cadeau, c'est l'album.</p>
           </article>
           <article class="occasion reveal">
             <svg class="occasion__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M12.5 27a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM19.5 27a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM17 12l1.25-2h2.5L22 12l-2.5 3ZM17 12h5M26 5v3M24.5 6.5h3M7 8h.01"/><path class="occasion__trace" d="M12.5 27a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM19.5 27a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM17 12l1.25-2h2.5L22 12l-2.5 3ZM17 12h5M26 5v3M24.5 6.5h3M7 8h.01" pathLength="1"/></svg>
-            <h3>Mariage</h3>
-            <p>L'appareil photo jetable sur les tables, sans les appareils à racheter ni les pellicules à développer. Un QR code, et chaque invité shoote depuis son téléphone.</p>
+            <h3 data-i18n="occ.wedding.title">Mariage</h3>
+            <p data-i18n="occ.wedding.text">L'appareil photo jetable sur les tables, sans les appareils à racheter ni les pellicules à développer. Un QR code, et chaque invité shoote depuis son téléphone.</p>
           </article>
           <article class="occasion reveal">
             <svg class="occasion__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M5.5 6h6l-.6 7.3a2.4 2.4 0 0 1-4.8 0ZM8.5 15.7V27M6 27h5M6 10h5M20.5 6h6l-.6 7.3a2.4 2.4 0 0 1-4.8 0ZM23.5 15.7V27M21 27h5M21 10h5M16 3v3M13.3 4.5l1.2 1.5M18.7 4.5l-1.2 1.5M15 12h.01M17 16h.01"/><path class="occasion__trace" d="M5.5 6h6l-.6 7.3a2.4 2.4 0 0 1-4.8 0ZM8.5 15.7V27M6 27h5M6 10h5M20.5 6h6l-.6 7.3a2.4 2.4 0 0 1-4.8 0ZM23.5 15.7V27M21 27h5M21 10h5M16 3v3M13.3 4.5l1.2 1.5M18.7 4.5l-1.2 1.5M15 12h.01M17 16h.01" pathLength="1"/></svg>
-            <h3>EVJF et EVG</h3>
-            <p>Ce qui se passe à l'enterrement de vie de jeune fille reste dans le coffre, jusqu'au lendemain. Et pas de spectateurs si la room est privée.</p>
+            <h3 data-i18n="occ.evjf.title">EVJF et EVG</h3>
+            <p data-i18n="occ.evjf.text">Ce qui se passe à l'enterrement de vie de jeune fille reste dans le coffre, jusqu'au lendemain. Et pas de spectateurs si la room est privée.</p>
           </article>
           <article class="occasion reveal">
             <svg class="occasion__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27h26M5 27l8-16 8 16M13 11v16M10.5 27 13 21.5l2.5 5.5M11.5 8 13 11l1.5-3M25 4.5a3.5 3.5 0 1 0 3 5.2 3 3 0 0 1-3-5.2ZM20 7h.01M27 15h.01"/><path class="occasion__trace" d="M3 27h26M5 27l8-16 8 16M13 11v16M10.5 27 13 21.5l2.5 5.5M11.5 8 13 11l1.5-3M25 4.5a3.5 3.5 0 1 0 3 5.2 3 3 0 0 1-3-5.2ZM20 7h.01M27 15h.01" pathLength="1"/></svg>
-            <h3>Week-end entre amis</h3>
-            <p>Une room sur plusieurs jours, des pings pendant tout le séjour, et un seul album partagé à la fin au lieu de dix conversations.</p>
+            <h3 data-i18n="occ.weekend.title">Week-end entre amis</h3>
+            <p data-i18n="occ.weekend.text">Une room sur plusieurs jours, des pings pendant tout le séjour, et un seul album partagé à la fin au lieu de dix conversations.</p>
           </article>
           <article class="occasion reveal">
             <svg class="occasion__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v7M16 24a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM9 17h14M10 13.5h12M10 20.5h12M16 10c-2.4 2-2.4 12 0 14M16 10c2.4 2 2.4 12 0 14M26 6v4M24 8h4M6 11v3M4.5 12.5h3M8 27.5h.01M24 27h.01"/><path class="occasion__trace" d="M16 3v7M16 24a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM9 17h14M10 13.5h12M10 20.5h12M16 10c-2.4 2-2.4 12 0 14M16 10c2.4 2 2.4 12 0 14M26 6v4M24 8h4M6 11v3M4.5 12.5h3M8 27.5h.01M24 27h.01" pathLength="1"/></svg>
-            <h3>Soirée étudiante</h3>
-            <p>Crémaillère, soirée d'intégration, gala : trente participants gratuits, et personne ne passe la soirée le nez dans la galerie.</p>
+            <h3 data-i18n="occ.student.title">Soirée étudiante</h3>
+            <p data-i18n="occ.student.text">Crémaillère, soirée d'intégration, gala : trente participants gratuits, et personne ne passe la soirée le nez dans la galerie.</p>
           </article>
           <article class="occasion reveal">
             <svg class="occasion__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4v3.5M16 15.5V19M8 11.5h3.5M20.5 11.5H24M10.3 5.8l2.5 2.5M19.2 14.7l2.5 2.5M21.7 5.8l-2.5 2.5M12.8 14.7l-2.5 2.5M16 23v5M13.5 25.5h5M6 23h.01M26 22h.01M25 3h.01"/><path class="occasion__trace" d="M16 4v3.5M16 15.5V19M8 11.5h3.5M20.5 11.5H24M10.3 5.8l2.5 2.5M19.2 14.7l2.5 2.5M21.7 5.8l-2.5 2.5M12.8 14.7l-2.5 2.5M16 23v5M13.5 25.5h5M6 23h.01M26 22h.01M25 3h.01" pathLength="1"/></svg>
-            <h3>Nouvel An</h3>
-            <p>Le coffre s'ouvre le 1er janvier à l'heure choisie. Première surprise de l'année, pour tout le monde en même temps.</p>
+            <h3 data-i18n="occ.nye.title">Nouvel An</h3>
+            <p data-i18n="occ.nye.text">Le coffre s'ouvre le 1er janvier à l'heure choisie. Première surprise de l'année, pour tout le monde en même temps.</p>
           </article>
         </div>
       </div>
@@ -453,72 +465,72 @@
     <!-- TARIFS -->
     <section class="pricing day" id="tarifs" data-day>
       <div class="container">
-        <h2 class="section-title reveal">Gratuit pour la plupart des soirées.</h2>
-        <p class="section-sub reveal">Tu paies seulement si la fête déborde. Une fois, pour cette room.</p>
+        <h2 class="section-title reveal" data-i18n="pricing.title">Gratuit pour la plupart des soirées.</h2>
+        <p class="section-sub reveal" data-i18n="pricing.sub">Tu paies seulement si la fête déborde. Une fois, pour cette room.</p>
         <div class="plans">
           <article class="plan reveal">
-            <h3>Gratuite</h3>
-            <p class="plan__price"><span class="tabular">0 €</span></p>
+            <h3 data-i18n="plan.free">Gratuite</h3>
+            <p class="plan__price"><span class="tabular" data-i18n="plan.free.price">0 €</span></p>
             <ul>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Jusqu'à 30 participants, toi compris</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Une pub à l'ouverture du coffre</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Photos brutes 30 jours, album pour toujours</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="plan.free.1">Jusqu'à 30 participants, toi compris</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="plan.free.2">Une pub à l'ouverture du coffre</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="plan.free.3">Photos brutes 30 jours, album pour toujours</span></li>
             </ul>
           </article>
           <article class="plan plan--premium reveal">
-            <h3>Premium <span class="plan__badge">Pour cette room</span></h3>
-            <p class="plan__price"><span class="tabular">0,99 €</span></p>
+            <h3 data-i18n-html="plan.premium">Premium <span class="plan__badge">Pour cette room</span></h3>
+            <p class="plan__price"><span class="tabular" data-i18n="plan.premium.price">0,99 €</span></p>
             <ul>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Participants illimités</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Aucune pub, coffre pur</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Achat unique, pas d'abonnement</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="plan.premium.1">Participants illimités</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="plan.premium.2">Aucune pub, coffre pur</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="plan.premium.3">Achat unique, pas d'abonnement</span></li>
             </ul>
           </article>
         </div>
-        <p class="pricing__note reveal"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg> Les spectateurs ne comptent jamais dans le plafond.</p>
+        <p class="pricing__note reveal"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg> <span data-i18n="pricing.note">Les spectateurs ne comptent jamais dans le plafond.</span></p>
       </div>
     </section>
 
     <!-- QUESTIONS -->
     <section class="faq day" id="questions" data-day>
       <div class="container faq__grid">
-        <h2 class="section-title reveal">Les règles du jeu.</h2>
+        <h2 class="section-title reveal" data-i18n="faq.title">Les règles du jeu.</h2>
         <div class="faq__list">
           <div class="faq__item reveal">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-b">Je peux voir les photos pendant la soirée ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq__panel" id="faq-1" role="region" aria-labelledby="faq-1-b"><div><p>Non. Personne, pas même l'hôte. Les photos restent scellées dans le coffre jusqu'à l'heure d'ouverture, le lendemain.</p></div></div>
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-b"><span data-i18n="faq.1.q">Je peux voir les photos pendant la soirée ?</span><span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-1" role="region" aria-labelledby="faq-1-b"><div><p data-i18n="faq.1.a">Non. Personne, pas même l'hôte. Les photos restent scellées dans le coffre jusqu'à l'heure d'ouverture, le lendemain.</p></div></div>
           </div>
           <div class="faq__item reveal">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-b">Et si je rate un ping ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq__panel" id="faq-2" role="region" aria-labelledby="faq-2-b"><div><p>Il est perdu. Pas de rattrapage, pas de photo importée de ta galerie. C'est ce qui rend l'album honnête.</p></div></div>
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-b"><span data-i18n="faq.2.q">Et si je rate un ping ?</span><span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-2" role="region" aria-labelledby="faq-2-b"><div><p data-i18n="faq.2.a">Il est perdu. Pas de rattrapage, pas de photo importée de ta galerie. C'est ce qui rend l'album honnête.</p></div></div>
           </div>
           <div class="faq__item reveal">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-b">Qui peut regarder une room en direct ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq__panel" id="faq-3" role="region" aria-labelledby="faq-3-b"><div><p>Seulement les rooms publiques, et jamais par leurs propres invités. Une room privée n'a pas de spectateurs.</p></div></div>
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-b"><span data-i18n="faq.3.q">Qui peut regarder une room en direct ?</span><span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-3" role="region" aria-labelledby="faq-3-b"><div><p data-i18n="faq.3.a">Seulement les rooms publiques, et jamais par leurs propres invités. Une room privée n'a pas de spectateurs.</p></div></div>
           </div>
           <div class="faq__item reveal">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-b">Il faut créer un compte ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq__panel" id="faq-4" role="region" aria-labelledby="faq-4-b"><div><p>Oui, un compte est nécessaire (email et mot de passe, Google, Apple ou passkey). Ton nom d'utilisateur signe tes photos, pas de profil à remplir.</p></div></div>
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-b"><span data-i18n="faq.4.q">Il faut créer un compte ?</span><span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-4" role="region" aria-labelledby="faq-4-b"><div><p data-i18n="faq.4.a">Oui, un compte est nécessaire (email et mot de passe, Google, Apple ou passkey). Ton nom d'utilisateur signe tes photos, pas de profil à remplir.</p></div></div>
           </div>
           <div class="faq__item reveal">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-b">Je peux être dans deux rooms à la fois ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq__panel" id="faq-5" role="region" aria-labelledby="faq-5-b"><div><p>Non, une seule à la fois. Tu es à une soirée, pas à trois.</p></div></div>
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-b"><span data-i18n="faq.5.q">Je peux être dans deux rooms à la fois ?</span><span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-5" role="region" aria-labelledby="faq-5-b"><div><p data-i18n="faq.5.a">Non, une seule à la fois. Tu es à une soirée, pas à trois.</p></div></div>
           </div>
           <div class="faq__item reveal">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-6" id="faq-6-b">Comment récupérer les photos de tous les invités ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq__panel" id="faq-6" role="region" aria-labelledby="faq-6-b"><div><p>Tu n'as rien à récupérer. Chaque photo prise dans la room part directement dans le même album partagé, qui s'ouvre pour tout le monde le lendemain. Plus besoin de relancer le groupe WhatsApp.</p></div></div>
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-6" id="faq-6-b"><span data-i18n="faq.6.q">Comment récupérer les photos de tous les invités ?</span><span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-6" role="region" aria-labelledby="faq-6-b"><div><p data-i18n="faq.6.a">Tu n'as rien à récupérer. Chaque photo prise dans la room part directement dans le même album partagé, qui s'ouvre pour tout le monde le lendemain. Plus besoin de relancer le groupe WhatsApp.</p></div></div>
           </div>
           <div class="faq__item reveal">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-7" id="faq-7-b">Wuuti, c'est un appareil photo jetable ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq__panel" id="faq-7" role="region" aria-labelledby="faq-7-b"><div><p>C'est l'esprit : pas d'aperçu, pas de retouche, et on découvre les photos plus tard. Sauf qu'ici, pas de pellicule à développer ni d'appareil à distribuer : chaque invité utilise son téléphone.</p></div></div>
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-7" id="faq-7-b"><span data-i18n="faq.7.q">Wuuti, c'est un appareil photo jetable ?</span><span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-7" role="region" aria-labelledby="faq-7-b"><div><p data-i18n="faq.7.a">C'est l'esprit : pas d'aperçu, pas de retouche, et on découvre les photos plus tard. Sauf qu'ici, pas de pellicule à développer ni d'appareil à distribuer : chaque invité utilise son téléphone.</p></div></div>
           </div>
           <div class="faq__item reveal">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-8" id="faq-8-b">Quelle différence avec BeReal ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq__panel" id="faq-8" role="region" aria-labelledby="faq-8-b"><div><p>BeReal, c'est une photo par jour avec tes amis. Wuuti, c'est le temps d'un événement : chacun reçoit ses pings à un moment différent, personne ne voit rien pendant la soirée, et tout se révèle d'un coup le lendemain.</p></div></div>
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-8" id="faq-8-b"><span data-i18n="faq.8.q">Quelle différence avec BeReal ?</span><span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-8" role="region" aria-labelledby="faq-8-b"><div><p data-i18n="faq.8.a">BeReal, c'est une photo par jour avec tes amis. Wuuti, c'est le temps d'un événement : chacun reçoit ses pings à un moment différent, personne ne voit rien pendant la soirée, et tout se révèle d'un coup le lendemain.</p></div></div>
           </div>
           <div class="faq__item reveal">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-9" id="faq-9-b">Ça marche pour un mariage ?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq__panel" id="faq-9" role="region" aria-labelledby="faq-9-b"><div><p>Oui. Les invités rejoignent avec un QR code sur les tables, et vous découvrez le lendemain le mariage vu par chacun d'eux. Au-delà de 30 invités, la formule Premium à 0,99 € ouvre la room sans limite.</p></div></div>
+            <h3><button type="button" aria-expanded="false" aria-controls="faq-9" id="faq-9-b"><span data-i18n="faq.9.q">Ça marche pour un mariage ?</span><span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq__panel" id="faq-9" role="region" aria-labelledby="faq-9-b"><div><p data-i18n="faq.9.a">Oui. Les invités rejoignent avec un QR code sur les tables, et vous découvrez le lendemain le mariage vu par chacun d'eux. Au-delà de 30 invités, la formule Premium à 0,99 € ouvre la room sans limite.</p></div></div>
           </div>
         </div>
       </div>
@@ -528,12 +540,12 @@
     <section class="final day" id="obtenir" data-day>
       <div class="container final__inner">
         <span class="eyes eyes--final" data-eyes data-eyes-final aria-hidden="true"></span>
-        <h2 class="final__title reveal">Ta prochaine soirée<br />mérite un coffre.</h2>
-        <p class="final__sub reveal">Wuuti n'est pas encore sorti. Il arrive très bientôt sur iPhone et Android.</p>
+        <h2 class="final__title reveal" data-i18n-html="final.title">Ta prochaine soirée<br />mérite un coffre.</h2>
+        <p class="final__sub reveal" data-i18n="final.sub">Wuuti n'est pas encore sorti. Il arrive très bientôt sur iPhone et Android.</p>
         <!-- TODO : au lancement, envelopper chaque badge d'un lien vers le store -->
-        <ul class="final__stores reveal" aria-label="Disponibilité">
-          <li class="store"><img src="assets/stores/app-store-fr.svg" alt="Télécharger dans l'App Store" width="177" height="56" /></li>
-          <li class="store"><img src="assets/stores/google-play-fr.svg" alt="Disponible sur Google Play" width="189" height="56" /></li>
+        <ul class="final__stores reveal" aria-label="Disponibilité" data-i18n-attr="aria-label:final.availability">
+          <li class="store"><img src="assets/stores/app-store-fr.svg" alt="Télécharger dans l'App Store" data-i18n-attr="alt:final.appstore,src:final.appstore.src,width:final.appstore.width" width="177" height="56" /></li>
+          <li class="store"><img src="assets/stores/google-play-fr.svg" alt="Disponible sur Google Play" data-i18n-attr="alt:final.googleplay,src:final.googleplay.src,width:final.googleplay.width" width="189" height="56" /></li>
         </ul>
       </div>
     </section>
@@ -544,15 +556,16 @@
       <a href="#top" class="wordmark wordmark--sm">
         w<span class="eyes" data-eyes data-eyes-open><span class="sr">uu</span></span>ti
       </a>
-      <nav class="footer__links" aria-label="Liens légaux">
-        <a href="mentions-legales.html">Mentions légales</a>
-        <a href="confidentialite.html">Confidentialité</a>
+      <nav class="footer__links" aria-label="Liens légaux" data-i18n-attr="aria-label:footer.aria">
+        <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
+        <a href="confidentialite.html" data-i18n="footer.privacy">Confidentialité</a>
         <a href="mailto:hello@wuuti.fr">hello@wuuti.fr</a>
       </nav>
       <p class="footer__copy">© 2026 Wuuti</p>
     </div>
   </footer>
 
-  <script src="main.js?v=12" defer></script>
+  <script src="i18n.js?v=2" defer></script>
+  <script src="main.js?v=13" defer></script>
 </body>
 </html>

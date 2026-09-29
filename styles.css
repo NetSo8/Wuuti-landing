@@ -307,8 +307,106 @@ body::after {
 }
 @media (max-width: 767px) {
   .nav__links { display: none; }
-  .nav .btn { margin-left: auto; }
 }
+
+/* ---------- Sélecteur de langue : globe + code ISO, noms natifs dans la liste ---------- */
+.lang { position: relative; margin-left: -8px; }
+@media (max-width: 767px) {
+  .lang { margin-left: auto; margin-right: -10px; }
+}
+.lang__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 40px;
+  padding: 0 12px 0 13px;
+  border: 1px solid rgb(127 154 158 / 0.32);
+  border-radius: 999px;
+  background: none;
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  transition: transform 160ms var(--ease-out), background-color 200ms ease, border-color 200ms ease;
+}
+.lang__btn:active { transform: scale(0.97); }
+.lang__globe { font-size: 18px; }
+.lang__caret { font-size: 12px; opacity: 0.6; transition: transform 240ms var(--ease-out); }
+.lang.is-open .lang__caret { transform: rotate(180deg); }
+.lang.is-open .lang__btn { background: rgb(127 154 158 / 0.14); }
+@media (hover: hover) and (pointer: fine) {
+  .lang__btn:hover { background: rgb(127 154 158 / 0.14); border-color: rgb(127 154 158 / 0.5); }
+}
+
+.lang__menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  min-width: 204px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--slate);
+  color: var(--foam);
+  box-shadow: 0 22px 44px -14px rgb(0 0 0 / 0.6);
+  transform-origin: top right;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px) scale(0.96);
+  transition:
+    opacity 160ms ease,
+    transform 220ms var(--ease-out),
+    visibility 0s linear 220ms;
+}
+.lang.is-open .lang__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
+}
+.lang__menu li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 18px;
+  font-size: 15px;
+  font-weight: 550;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+.lang__menu li:focus-visible { outline-offset: -2px; border-radius: 18px; }
+.lang__name { flex: 1; }
+.lang__iso { font-size: 12px; font-weight: 650; letter-spacing: 0.06em; color: var(--mist); }
+.lang__check { font-size: 16px; color: var(--ember-soft); opacity: 0; transform: scale(0.6); transition: opacity 160ms ease, transform 220ms var(--ease-spring); }
+.lang__menu li[aria-selected="true"] { font-weight: 700; }
+.lang__menu li[aria-selected="true"] .lang__check { opacity: 1; transform: none; }
+@media (hover: hover) and (pointer: fine) {
+  .lang__menu li:hover { background: rgb(127 154 158 / 0.16); }
+}
+.nav[data-theme="day"] .lang__btn { border-color: rgb(15 29 32 / 0.2); }
+.nav[data-theme="day"] .lang__btn:hover,
+.nav[data-theme="day"] .lang.is-open .lang__btn { background: rgb(15 29 32 / 0.06); border-color: rgb(15 29 32 / 0.32); }
+.nav[data-theme="day"] .lang__menu {
+  background: var(--paper-hi);
+  color: var(--ink-text);
+  border-color: var(--paper-line);
+  box-shadow: 0 22px 44px -16px rgb(15 29 32 / 0.28);
+}
+.nav[data-theme="day"] .lang__iso { color: var(--ink-muted); }
+.nav[data-theme="day"] .lang__check { color: var(--ember); }
+.nav[data-theme="day"] .lang__menu li:hover { background: rgb(15 29 32 / 0.06); }
+.nav[data-theme="day"] .lang__menu li:focus-visible { outline-color: var(--ember-deep); }
+@media (max-width: 400px) {
+  .lang__btn { padding: 0 10px; gap: 5px; }
+  .lang__caret { display: none; }
+}
+
+/* Le temps de charger une langue, la page reste masquée : pas d'éclair de français. */
+html.i18n-pending body { opacity: 0; }
+body { transition: opacity 200ms ease; }
 
 /* ---------- Pastille "bientôt" (état réel : l'app n'est pas sortie) ---------- */
 .soon {

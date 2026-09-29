@@ -12,6 +12,9 @@
   const easeOut = (t) => 1 - Math.pow(1 - t, 3);
   const pad2 = (n) => String(n).padStart(2, "0");
   const attrs = (el, o) => { for (const k in o) el.setAttribute(k, o[k]); };
+  // Textes posés par le JS : le français est ici, les autres langues viennent de i18n.js.
+  const t = (key, fr) => (window.wuutiI18n ? window.wuutiI18n.t(key, fr) : fr);
+  const onLang = (fn) => addEventListener("wuuti:lang", fn);
 
   // Observe un ou plusieurs éléments ; `once` coupe l'observation au premier passage.
   const watch = (targets, cb, { once = false, ...opts } = {}) => {
@@ -250,7 +253,6 @@
      Hero : notification qui tombe, compte à rebours, inclinaison
      ------------------------------------------------------------------ */
   const notif = $("[data-notif]");
-  const notifCount = $("[data-notif-count]");
   const fmt = (s) => `${Math.floor(s / 60)}:${pad2(s % 60)}`;
   const rings = $("[data-rings]");
   const ring = () => {
@@ -259,11 +261,14 @@
     rings.classList.add("is-ringing");
   };
   let notifLeft = 120;
+  // Le compte à rebours est dans le texte traduit : on le retrouve à chaque tick.
+  const paintCount = () => { const c = $("[data-notif-count]"); if (c) c.textContent = fmt(notifLeft); };
+  onLang(paintCount);
   setTimeout(() => { notif.classList.add("is-in"); if (!reduceMotion) ring(); }, reduceMotion ? 0 : 1300);
   setInterval(() => {
     if (document.hidden) return;
     notifLeft = notifLeft <= 0 ? 120 : notifLeft - 1;
-    notifCount.textContent = fmt(notifLeft);
+    paintCount();
     if (notifLeft === 120 && !reduceMotion) ring(); // nouveau ping : ça resonne
   }, 1000);
 
@@ -336,21 +341,26 @@
      Manifeste : les mots s'allument un à un
      ------------------------------------------------------------------ */
   const words = $("[data-words]");
-  words.innerHTML = words.textContent
-    .trim()
-    .split(/\s+/)
-    .map((w, k) => `<span class="w" style="--k:${k}">${w}</span>`)
-    .join(" ");
+  const splitWords = () => {
+    words.innerHTML = words.textContent
+      .trim()
+      .split(/\s+/)
+      .map((w, k) => `<span class="w" style="--k:${k}">${w}</span>`)
+      .join(" ");
+  };
+  splitWords();
+  onLang(splitWords); // i18n.js réécrit le texte : on redécoupe (is-in reste sur le conteneur)
   watch(words, (inView) => inView && words.classList.add("is-in"), { once: true, threshold: 0.5 });
 
   const photos = Array.from({ length: 12 }, (_, i) => `assets/photos/p${i}.webp?v=2`);
   // Une légende par polaroïd, dans l'ordre des photos : les six premières
   // (visibles sur mobile) couvrent chacune une occasion.
-  const captions = [
+  const captionsFr = [
     "Les 18 ans de Léa", "EVJF de Camille", "Mariage J & T", "Le week-end",
     "Crémaillère", "Minuit pile", "Surprise !", "1er janvier",
     "Soirée d'inté", "Première danse", "Lac, 23h", "Les témoins",
   ];
+  const caption = (i) => t(`polaroid.${i}`, captionsFr[i]);
 
   /* ------------------------------------------------------------------
      Le coffre : compte à rebours, puis la nuit bascule en jour
@@ -409,11 +419,12 @@
       img.addEventListener("error", () => { img.src = photos[(i + 5) % photos.length]; }, { once: true });
       img.src = photos[i];
       const cap = document.createElement("figcaption");
-      cap.textContent = captions[i];
+      cap.textContent = caption(i);
       p.append(img, cap);
     });
   }, { once: true, rootMargin: "150% 0px" });
   matchMedia("(max-width: 767px)").addEventListener("change", placeSpots);
+  onLang(() => $$(".polaroid figcaption", photoHost).forEach((c, i) => { c.textContent = caption(i); }));
 
   const setVault = (open) => {
     if (vault.classList.contains("is-open") === open) return;
@@ -467,11 +478,12 @@
   // Pings : chaque personne reçoit les siens à un moment différent.
   const timeline = $("[data-timeline]");
   const seg = $("[data-seg]");
-  const who = ["Léa", "Sami", "Toi"];
+  const whoFr = ["Léa", "Sami", "Toi"];
   const rand = (seed) => () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646;
   const renderPings = (rate) => {
     timeline.innerHTML = "";
-    who.forEach((name, li) => {
+    whoFr.forEach((nameFr, li) => {
+      const name = t(`pings.who${li + 1}`, nameFr);
       const r = rand(97 + li * 131 + rate * 7);
       // `rate` = pings par personne sur la soirée, un par tranche, placé au hasard dedans
       const dots = Array.from({ length: rate }, (_, k) => clamp((k + 0.15 + r() * 0.7) / rate, 0.02, 0.98));
@@ -487,6 +499,7 @@
     seg.style.setProperty("--idx", i);
     renderPings(+b.dataset.rate);
   }, 1);
+  onLang(() => $$(".lane__who", timeline).forEach((el, i) => { el.textContent = t(`pings.who${i + 1}`, whoFr[i]); }));
 
   /* ------------------------------------------------------------------
      FAQ

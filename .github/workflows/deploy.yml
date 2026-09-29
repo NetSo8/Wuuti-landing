@@ -27,9 +27,9 @@ jobs:
       - name: Préparer les fichiers du site
         run: |
           mkdir dist
-          cp index.html mentions-legales.html confidentialite.html styles.css main.js \
+          cp index.html mentions-legales.html confidentialite.html styles.css main.js i18n.js \
              robots.txt sitemap.xml llms.txt .htaccess dist/
-          cp -R assets dist/
+          cp -R assets locales dist/
           find dist -name .DS_Store -delete
 
       - name: Téléverser sur l'hébergement

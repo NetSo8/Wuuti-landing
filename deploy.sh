@@ -16,8 +16,8 @@ read -rsp "Mot de passe FTP pour ${FTP_USER}@${HOST} : " FTP_PASS
 echo
 
 # Fichiers du site (+ .htaccess, robots, sitemap), sans les fichiers de travail (.claude, .DS_Store, ce script)
-FILES=(index.html mentions-legales.html confidentialite.html styles.css main.js robots.txt sitemap.xml llms.txt .htaccess)
-while IFS= read -r f; do FILES+=("$f"); done < <(find assets -type f ! -name ".DS_Store" | sort)
+FILES=(index.html mentions-legales.html confidentialite.html styles.css main.js i18n.js robots.txt sitemap.xml llms.txt .htaccess)
+while IFS= read -r f; do FILES+=("$f"); done < <(find assets locales -type f ! -name ".DS_Store" | sort)
 
 echo "Envoi de ${#FILES[@]} fichiers vers ${HOST}/${REMOTE_DIR}/"
 for f in "${FILES[@]}"; do
