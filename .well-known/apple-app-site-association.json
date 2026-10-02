@@ -1,0 +1,25 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "83Z24FN442.app.wuuti.wuuti",
+          "85YHYGX3R5.app.wuuti.wuuti"
+        ],
+        "components": [
+          {
+            "/": "/join/*",
+            "comment": "Rejoindre une room via invitation"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "83Z24FN442.app.wuuti.wuuti",
+      "85YHYGX3R5.app.wuuti.wuuti"
+    ]
+  }
+}

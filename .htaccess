@@ -18,6 +18,16 @@ AddType image/webp .webp
 AddType application/manifest+json .webmanifest
 AddCharset utf-8 .html .css .js .xml .txt .md
 
+# Fichiers d'association d'applications mobiles (iOS / Android) : Content-Type application/json obligatoire
+<Files "apple-app-site-association">
+  ForceType application/json
+  Header set Content-Type "application/json; charset=utf-8"
+</Files>
+<Files "assetlinks.json">
+  ForceType application/json
+  Header set Content-Type "application/json; charset=utf-8"
+</Files>
+
 # Compression du texte
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json image/svg+xml application/xml text/xml text/plain
@@ -34,6 +44,11 @@ AddCharset utf-8 .html .css .js .xml .txt .md
   </FilesMatch>
   <FilesMatch "\.(webp|jpg|jpeg|png|svg|ico|woff2)$">
     Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+
+  # Fichiers d'association (Passkeys, App Links / Universal Links) : revalidation fréquente (1 heure)
+  <FilesMatch "^(apple-app-site-association(\.json)?|assetlinks\.json)$">
+    Header set Cache-Control "public, max-age=3600"
   </FilesMatch>
 
   # Sécurité. La CSP n'autorise que nos propres fichiers ; 'unsafe-inline' côté styles

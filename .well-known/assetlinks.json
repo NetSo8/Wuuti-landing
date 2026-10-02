@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.wuuti.wuuti",
+      "sha256_cert_fingerprints": [
+        "62:BB:71:DE:B6:91:94:28:95:FB:36:2B:40:94:53:41:88:0F:D3:68:F0:5C:DA:BE:FC:FB:39:28:C4:14:AB:D6"
+      ]
+    }
+  }
+]
