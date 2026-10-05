@@ -22,7 +22,7 @@
   </header>
   <main class="container legal__body">
     <h1>Politique de confidentialité</h1>
-    <p class="legal__date">Dernière mise à jour : 27 septembre 2026</p>
+    <p class="legal__date">Dernière mise à jour : 5 octobre 2026</p>
 
     <p>Cette politique explique quelles données personnelles Wuuti collecte, pourquoi, combien de temps elles sont gardées et quels sont tes droits, conformément au Règlement général sur la protection des données (RGPD, règlement UE 2016/679) et à la loi Informatique et Libertés.</p>
 
@@ -38,30 +38,38 @@
     <table>
       <thead><tr><th>Données</th><th>Finalité</th><th>Base légale</th></tr></thead>
       <tbody>
-        <tr><td>Compte : identifiant, e-mail, nom et photo de profil transmis par la connexion Google (OAuth)</td><td>Créer et sécuriser ton compte</td><td>Exécution du contrat</td></tr>
-        <tr><td>Pseudo, soirées créées ou rejointes, participants</td><td>Faire fonctionner les soirées et les albums partagés</td><td>Exécution du contrat</td></tr>
-        <tr><td>Photos prises dans l'app</td><td>Les stocker dans le coffre et les révéler aux membres de la soirée</td><td>Exécution du contrat</td></tr>
-        <tr><td>Jeton de notification de l'appareil</td><td>T'envoyer les pings et l'ouverture de l'album</td><td>Exécution du contrat</td></tr>
-        <tr><td>Données techniques (modèle d'appareil, version, rapports de plantage)</td><td>Corriger les bugs et sécuriser le service</td><td>Intérêt légitime</td></tr>
+        <tr><td>Compte : identifiant, e-mail, prénom, photo de profil ; selon le mode de connexion, informations transmises par Apple, Google ou ta passkey (clé publique uniquement)</td><td>Créer et sécuriser ton compte</td><td>Exécution du contrat</td></tr>
+        <tr><td>Date de naissance</td><td>Vérifier que tu as au moins 18 ans</td><td>Obligation légale / exécution du contrat</td></tr>
+        <tr><td>Pseudo, rooms créées ou rejointes, participants, commentaires et j'aime</td><td>Faire fonctionner les rooms et les albums partagés</td><td>Exécution du contrat</td></tr>
+        <tr><td>Photos prises dans l'app (et photo de couverture choisie)</td><td>Les stocker dans le coffre et les révéler aux membres de la room</td><td>Exécution du contrat</td></tr>
+        <tr><td>Jetons de notification et de Live Activity de l'appareil</td><td>T'envoyer les pings, la fin de la room et l'ouverture du coffre</td><td>Exécution du contrat</td></tr>
+        <tr><td>Achats intégrés (identifiant de transaction Apple ou Google, produit acheté)</td><td>Activer une room Premium et éviter les doubles paiements</td><td>Exécution du contrat</td></tr>
+        <tr><td>Signalements (contenu ou utilisateur signalé, motif, capture jointe)</td><td>Modérer et protéger la communauté</td><td>Intérêt légitime / obligation légale</td></tr>
+        <tr><td>Mesure d'usage et rapports de plantage (écrans vus, actions, modèle d'appareil, version ; enregistrements de session avec textes et images masqués)</td><td>Comprendre l'usage, corriger les bugs, améliorer l'app</td><td>Intérêt légitime</td></tr>
+        <tr><td>Publicité : identifiants publicitaires et données techniques traités par Google AdMob, uniquement avec ton consentement là où il est requis</td><td>Afficher une publicité à l'ouverture du coffre des rooms gratuites</td><td>Consentement</td></tr>
       </tbody>
     </table>
-    <p>Nous ne vendons jamais tes données et ne les utilisons pas à des fins publicitaires.</p>
+    <p>Nous ne vendons jamais tes données. Aucune publicité n'est ciblée à partir de tes photos ou de tes rooms. Tu peux retirer ton consentement publicitaire à tout moment depuis l'app ; les rooms Premium n'affichent pas de publicité.</p>
 
     <h2>4. Destinataires et sous-traitants</h2>
     <ul>
-      <li><strong>OVH SAS</strong> (France) — hébergement du site.</li>
-      <li><strong>Google Ireland Limited / Google LLC</strong> — Firebase (authentification, base de données, stockage des photos, notifications) et Google Cloud (connexion OAuth avec Google).</li>
-      <li>Les autres participants d'une soirée voient ton pseudo, ta photo de profil et les photos que tu y prends.</li>
+      <li><strong>OVH SAS</strong> (France) — hébergement du site et des serveurs de l'application (base de données, API).</li>
+      <li><strong>Cloudflare, Inc.</strong> — stockage des photos (Cloudflare R2).</li>
+      <li><strong>Google Ireland Limited / Google LLC</strong> — notifications (Firebase Cloud Messaging), connexion avec Google, publicité (AdMob), achats sur Android (Google Play).</li>
+      <li><strong>Apple Inc. / Apple Distribution International</strong> — notifications et Live Activities (APNs), connexion avec Apple, achats sur iPhone (App Store).</li>
+      <li><strong>PostHog Inc.</strong> (hébergement dans l'Union européenne) — mesure d'usage et rapports de plantage.</li>
+      <li>Les autres participants d'une room voient ton pseudo, ta photo de profil, tes photos et tes commentaires dans cette room. Une room publique peut être suivie par des spectateurs.</li>
     </ul>
 
     <h2>5. Transferts hors de l'Union européenne</h2>
-    <p>Google peut traiter certaines données aux États-Unis. Ces transferts sont encadrés par le Data Privacy Framework UE–États-Unis, dont Google LLC est certifié, et par les clauses contractuelles types de la Commission européenne intégrées aux conditions de traitement des données de Google Cloud et Firebase.</p>
+    <p>Google, Apple et Cloudflare peuvent traiter certaines données aux États-Unis. Ces transferts sont encadrés par le Data Privacy Framework UE–États-Unis, dont ces sociétés sont certifiées, et par les clauses contractuelles types de la Commission européenne.</p>
 
     <h2>6. Durées de conservation</h2>
     <ul>
       <li>Données de compte : tant que ton compte est actif, puis supprimées sous 30 jours après sa suppression.</li>
-      <li>Photos et soirées : tant que la soirée existe ou jusqu'à leur suppression par toi ou l'organisateur.</li>
-      <li>Données techniques et rapports de plantage : 90 jours maximum.</li>
+      <li>Photos et rooms : tant que la room existe ou jusqu'à leur suppression par toi ou l'hôte.</li>
+      <li>Justificatifs d'achat : durée imposée par les obligations comptables (10 ans).</li>
+      <li>Mesure d'usage et rapports de plantage : 12 mois maximum.</li>
     </ul>
 
     <h2>7. Tes droits</h2>
@@ -69,10 +77,10 @@
     <p>Si tu estimes que tes droits ne sont pas respectés, tu peux introduire une réclamation auprès de la CNIL : <a href="https://www.cnil.fr/fr/plaintes" rel="noopener">cnil.fr/fr/plaintes</a>.</p>
 
     <h2>8. Mineurs</h2>
-    <p>Wuuti est réservé aux personnes âgées d'au moins 15 ans. La date de naissance est demandée à l'inscription uniquement pour vérifier cet âge : elle n'est pas conservée, seul le fait d'avoir 15 ans ou plus est enregistré. En dessous de 15 ans, l'inscription est refusée et rien n'est enregistré. Tout utilisateur peut signaler un compte qui semble appartenir à une personne mineure de moins de 15 ans ; si le signalement est confirmé, le compte et ses données sont supprimés.</p>
+    <p>Wuuti est réservé aux personnes majeures (18 ans ou plus). La date de naissance est demandée à l'inscription pour vérifier cet âge ; en dessous, l'inscription est refusée et rien n'est enregistré. Tout utilisateur peut signaler un compte qui semble appartenir à une personne mineure ; si le signalement est confirmé, le compte et ses données sont supprimés.</p>
 
     <h2>9. Sécurité</h2>
-    <p>Les échanges sont chiffrés (HTTPS/TLS), l'accès aux données est limité par des règles de sécurité Firebase, et les photos ne sont accessibles qu'aux membres de la soirée concernée.</p>
+    <p>Les échanges sont chiffrés (HTTPS/TLS), les identifiants de connexion sont gardés dans le trousseau sécurisé de ton téléphone, et les photos ne sont accessibles qu'aux membres de la room concernée (et à ses spectateurs si elle est publique).</p>
 
     <h2>10. Modifications</h2>
     <p>Cette politique peut évoluer. La date de mise à jour en haut de page indique la dernière version.</p>
@@ -82,6 +90,7 @@
       <nav class="footer__links" aria-label="Liens légaux">
         <a href="mentions-legales.html">Mentions légales</a>
         <a href="confidentialite.html">Confidentialité</a>
+        <a href="conditions.html">Conditions d'utilisation</a>
         <a href="mailto:hello@wuuti.fr">hello@wuuti.fr</a>
       </nav>
       <p class="footer__copy">© 2026 Wuuti</p>
