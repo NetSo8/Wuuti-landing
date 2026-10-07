@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir dist
           cp index.html mentions-legales.html confidentialite.html conditions.html styles.css main.js i18n.js \
-             robots.txt sitemap.xml llms.txt .htaccess dist/
+             robots.txt sitemap.xml llms.txt .htaccess app-ads.txt dist/
           cp -R assets locales .well-known dist/
           find dist -name .DS_Store -delete
 
