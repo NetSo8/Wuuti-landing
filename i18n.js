@@ -14,7 +14,7 @@
   ];
   const DEFAULT = "fr";
   const STORE = "wuuti-lang";
-  const VERSION = "2";
+  const VERSION = "3";
 
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
