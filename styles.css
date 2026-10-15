@@ -1184,6 +1184,11 @@ body { transition: opacity 200ms ease; }
 .final__stores { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 36px 0 0; }
 /* Badges officiels Apple / Google : fichiers d'origine, non modifiés */
 .store { display: flex; }
+.store a { display: inline-flex; border-radius: 9px; transition: opacity 160ms ease, transform 160ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  .store a:hover { opacity: 0.88; transform: translateY(-1px); }
+}
+.store a:active { transform: translateY(0); opacity: 0.75; }
 .store img { display: block; height: 56px; width: auto; }
 
 /* ---------- Footer ---------- */
