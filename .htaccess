@@ -53,9 +53,9 @@ AddCharset utf-8 .html .css .js .xml .txt .md
 
   # Sécurité. La CSP n'autorise que nos propres fichiers ; 'unsafe-inline' côté styles
   # seulement, pour les variables CSS posées en attribut (style="--d: ...").
-  # Seule exception : Microsoft Clarity (www.clarity.ms, script + envois + pixel),
-  # qui de toute façon n'est chargé qu'après consentement (voir consent.js).
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://www.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.clarity.ms; font-src 'self'; connect-src 'self' https://www.clarity.ms; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+  # Seule exception : Microsoft Clarity (*.clarity.ms : tag, scripts.clarity.ms,
+  # envois, pixel), qui de toute façon n'est chargé qu'après consentement (voir consent.js).
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://*.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.clarity.ms; font-src 'self'; connect-src 'self' https://*.clarity.ms; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
   Header always set Strict-Transport-Security "max-age=31536000"
   Header always set Cross-Origin-Opener-Policy "same-origin"
   Header always set X-Content-Type-Options "nosniff"
